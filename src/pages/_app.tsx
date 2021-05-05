@@ -1,7 +1,11 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import { ChakraProvider } from "@chakra-ui/react";
 
-function EdsonPauloApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
-export default EdsonPauloApp;
+const MainApp = ({ Component, pageProps }: AppProps) => (
+  <ChakraProvider>
+    <Component {...pageProps} />
+  </ChakraProvider>
+);
+
+export default MainApp;
