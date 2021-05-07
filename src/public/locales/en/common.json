@@ -1,0 +1,9 @@
+{
+  "home": "Welcome to the party",
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  }
+}
