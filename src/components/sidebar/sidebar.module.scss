@@ -1,0 +1,30 @@
+.nav {
+  a {
+    position: relative;
+    margin-bottom: 5px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    font-size:  22pt;
+
+    i {
+      transition: 0.5s;
+      position: absolute;
+    }
+    p {
+      opacity: 0;
+      font-size: 11pt;
+      transition: 0.5s;
+      letter-spacing: 2px;
+      position: absolute;
+      text-transform: uppercase;
+    }
+    &:hover {
+      i {  opacity: 0; }
+      p { opacity: 1; }
+    }
+  }
+}
