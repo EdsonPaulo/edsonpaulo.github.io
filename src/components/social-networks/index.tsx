@@ -1,34 +1,49 @@
-import { Flex, Link } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Link } from "@chakra-ui/react";
+import React, { FC } from "react";
 import {
   FaGithubAlt,
   FaLinkedinIn,
   FaInstagram,
   FaFacebookF,
+  FaEnvelope,
+  FaEnvelopeSquare,
 } from "react-icons/fa";
 
-// import { Container } from './styles';
+const SocialButton: FC<{ href: string }> = ({ children, href }) => (
+  <Link
+    p="2"
+    mx="2"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    bg="light"
+    color="dark.900"
+    borderRadius="full"
+    _hover={{ bg: "dark.500", color: "accent" }}
+  >
+    {children}
+  </Link>
+);
 
-const SocialNetworks: React.FC = () => {
+const SocialNetworks: FC = () => {
   return (
-    <>
-      <Flex alignItems="center">
-        <Link>
-          <FaGithubAlt />
-        </Link>
-        <Link ml="3">
-          <FaLinkedinIn />
-        </Link>
-      </Flex>
-      <Flex mt="3" alignItems="center">
-        <Link>
-          <FaInstagram />
-        </Link>
-        <Link ml="3">
-          <FaFacebookF />
-        </Link>
-      </Flex>
-    </>
+    <Flex alignItems="center">
+      <SocialButton href="https://github.com/EdsonPaulo">
+        <FaGithubAlt />
+      </SocialButton>
+
+      <SocialButton href="https://linkedin.com/in/edsonpaulo1">
+        <FaLinkedinIn />
+      </SocialButton>
+
+      <SocialButton href="https://instagram.com/edsonpaulo24">
+        <FaInstagram />
+      </SocialButton>
+
+      <SocialButton href="https://facebook.com/EdsonGregorioEG">
+        <FaFacebookF />
+      </SocialButton>
+    </Flex>
   );
 };
 

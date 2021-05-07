@@ -24,7 +24,6 @@ const CustomTheme = extendTheme(
     styles: {
       global: {
         body: {
-          minH: "100vh",
           bg: COLORS.dark[800],
           color: COLORS.light,
           fontSize: "16pt",

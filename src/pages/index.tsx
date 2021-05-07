@@ -3,8 +3,18 @@ import { GetStaticProps } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-import { HomeSection, Sidebar } from "../components";
+import {
+  ContactSection,
+  Footer,
+  HomeSection,
+  PortfolioSection,
+  Sidebar,
+  SkillsSection,
+  ExperienceSection,
+} from "../components";
+import ScrollStatus from "../components/scroll-status";
 
 export const getStaticProps: GetStaticProps = async ({ locale = "en" }) => ({
   props: {
@@ -13,11 +23,12 @@ export const getStaticProps: GetStaticProps = async ({ locale = "en" }) => ({
 });
 
 export default function Home() {
+  const { t } = useTranslation("common");
   return (
-    <Box>
+    <>
       <Head>
-        <title>Edson Paulo Gregório - Portfolio</title>
-        <meta name="description" content="Edson Paulo Gregório´s portfolio" />
+        <title>{t("meta.title")} </title>
+        <meta name="description" content={t("meta.description")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -25,13 +36,35 @@ export default function Home() {
         <Flex>
           <Sidebar />
 
-          <Box p="24">
-            <HomeSection />
+          <Box ml="50px" flex={1}>
+            <Box minH="100vh" id="about" py="6" px="24">
+              <HomeSection />
+            </Box>
+
+            <Box minH="100vh" id="skills" py="6" px="24" bg="dark.700">
+              <SkillsSection />
+            </Box>
+
+            <Box minH="100vh" id="experience" py="6" px="24">
+              <ExperienceSection />
+            </Box>
+
+            <Box minH="100vh" id="portfolio" py="6" px="24">
+              <PortfolioSection />
+            </Box>
+
+            <Box minH="100vh" id="contact" py="6" px="24">
+              <ContactSection />
+            </Box>
           </Box>
+
+          <ScrollStatus />
         </Flex>
       </main>
 
-      <footer></footer>
-    </Box>
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
