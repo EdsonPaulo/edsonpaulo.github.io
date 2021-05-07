@@ -1,8 +1,8 @@
-export { default as HomeSection } from "./sections/home";
-export { default as SkillsSection } from "./sections/home";
-export { default as PortfolioSection } from "./sections/home";
-export { default as ExperienceSection } from "./sections/home";
-export { default as ContactSection } from "./sections/contact";
+export { default as HomeSection } from "./section/home";
+export { default as SkillsSection } from "./section/skills";
+export { default as PortfolioSection } from "./section/portfolio";
+export { default as ExperienceSection } from "./section/experience";
+export { default as ContactSection } from "./section/contact";
 
 export { default as Sidebar } from "./sidebar";
 export { default as Footer } from "./footer";

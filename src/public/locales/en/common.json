@@ -1,9 +1,50 @@
 {
-  "home": "Welcome to the party",
+  "home": "Welcome to the party!",
+  "me": {
+    "fullname": "Edson Paulo Gregorio",
+    "email": "edsonpaulo24@gmail.com",
+    "phone": "+244 942 682 194",
+    "whatsapp": "+244 942 682 194"
+  },
   "nav": {
-    "home": "Home",
+    "about": "About",
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "contact": "Contact"
+    "experience": "Experience",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "meta": {
+    "title": "Edson Gregorio - Web & Mobile Developer",
+    "description": "Web & mobile apps developer | Fullstack | Frontend | Backend | Mobile (android & ios)"
+  },
+  "footer": {
+    "created-by": "Created by EdsonPaulo with"
+  },
+  "section": {
+    "about": {
+      "title": "About me",
+      "subtitle": "a web & mobile developer"
+    },
+    "skills": {
+      "title": "My Skills",
+      "subtitle": ""
+    },
+    "experience": {
+      "title": "Professional experience",
+      "subtitle": ""
+    },
+    "portfolio": {
+      "title": "Portfolio",
+      "subtitle": "My works"
+    },
+    "contact": {
+      "title": "Contact me",
+      "subtitle": ""
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": ""
+    }
   }
 }
