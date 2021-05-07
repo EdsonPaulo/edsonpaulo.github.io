@@ -1,11 +1,15 @@
-import { Button, IconButton } from "@chakra-ui/button";
-import { Box, Flex, Heading, Link, Stack, Text } from "@chakra-ui/react";
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import { FiMail } from "react-icons/fi";
-import { CgCoffee, CgHome, CgBriefcase, CgMail } from "react-icons/cg";
-import { motion } from "framer-motion";
+import { Button } from "@chakra-ui/button";
+import { Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import React from "react";
+import {
+  BiBriefcase,
+  BiCodeAlt,
+  BiEnvelope,
+  BiUser,
+  BiCoffee,
+} from "react-icons/bi";
 
 import styles from "./sidebar.module.scss";
 
@@ -27,6 +31,7 @@ const Sidebar: React.FC = () => {
       h="100vh"
       bg="dark.900"
       alignItems="center"
+      position="fixed"
       flexDirection="column"
       justifyContent="space-between"
     >
@@ -40,27 +45,33 @@ const Sidebar: React.FC = () => {
 
       <nav>
         <Flex flexDirection="column" className={styles.nav}>
-          <Link href="#home">
+          <Link href="#about">
             <i>
-              <CgHome />
+              <BiUser />
             </i>
-            <Text>{t("nav.home")}</Text>
+            <Text>{t("nav.abou")}</Text>
           </Link>
           <Link href="#skills">
             <i>
-              <CgCoffee />
+              <BiCoffee />
             </i>
             <Text>{t("nav.skills")}</Text>
           </Link>
-          <Link href="#works">
+          <Link href="#experience">
             <i>
-              <CgBriefcase />
+              <BiBriefcase />
+            </i>
+            <Text>{t("nav.experience")}</Text>
+          </Link>
+          <Link href="#portfolio">
+            <i>
+              <BiCodeAlt />
             </i>
             <Text>{t("nav.portfolio")}</Text>
           </Link>
           <Link href="#contact">
             <i>
-              <FiMail />
+              <BiEnvelope />
             </i>
             <Text>{t("nav.contact")}</Text>
           </Link>
