@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {
             <i>
               <BiUser />
             </i>
-            <Text>{t("nav.abou")}</Text>
+            <Text>{t("nav.about")}</Text>
           </Link>
           <Link href="#skills">
             <i>

@@ -12,13 +12,11 @@ const Footer: React.FC = () => {
 
   return (
     <Box ml="100px" px="12" py="6" bg="dark.900" color="gray.300" fontSize="lg">
-      <Flex mb="6" alignItems="center" justifyContent="space-between">
+      <Flex mb="4" alignItems="center" justifyContent="space-between">
         <Box>
           <Text letterSpacing="widest">{`(EPG) => {};`}</Text>
           <Text color="gray.500">{t("me.fullname")}</Text>
         </Box>
-
-        <SocialNetworks/>
 
         <Box>
           <Flex alignItems="center">
