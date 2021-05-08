@@ -1,24 +1,24 @@
 @font-face {
-  font-family: "Cairo";
-  src: url("../public/fonts/Cairo.ttf");
+  font-family: "Itim";
+  src: url("../public/fonts/Itim.ttf");
 }
 @font-face {
   font-family: "TradeGothic";
   src: url("../public/fonts/TradeGothic.ttf");
 }
 @font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../public/fonts/PlayfaiDisplay.ttf");
+  font-family: "IndieFlower";
+  src: url("../public/fonts/IndieFlower.ttf");
 }
 
-$font-Cairo: "Cairo";
 $font-TradeGothic: "TradeGothic";
-$font-PlayfairDisplay: "PlayfairDisplay";
+$font-IndieFlower: "IndieFlower";
+$font-Itim: "Itim";
 
 /* colors variables */
 $dark-color: #1c1e1f;
 $light-color: #ecf0f1;
-$accent-color: #ffa801 !default;
+$accent-color: crimson !default;
 $primary-color: #1e272e !default;
 
 $dark-900-color: #090909;
@@ -38,18 +38,17 @@ body {
   margin: 0;
   color: $light-color;
   scroll-behavior: smooth;
-  font-family: $font-TradeGothic, $font-Cairo, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+  font-family: $font-Itim, cursive, $font-TradeGothic, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif !important;
 }
 
 code {
   letter-spacing: 1px;
-  font-style: oblique;
   display: block;
-  opacity: 0.8;
+  opacity: 0.6;
   color: lightslategray;
-  font-family: $font-TradeGothic, Consolas, monospace;
+  font-family: $font-IndieFlower, cursive !important;
 }
 
 button,
@@ -70,7 +69,7 @@ a {
 }
 ::selection {
   color: $light-color;
-  background: $dark-500-color;
+  background: $accent-color;
 }
 
 /*** Customisable scroolbar (not Firefox/IE) ***/

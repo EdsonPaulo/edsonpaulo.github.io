@@ -8,7 +8,7 @@ const ExperienceSection: React.FC = () => {
   const { t } = useTranslation("common");
 
   return (
-    <Box minH="100%" flexDirection="column" justifyContent="space-between">
+    <Box>
       <Box>
         <SectionTitle title={t("section.experience.title")} />
         <Text as="h2">{t("section.experience.subtitle")}</Text>

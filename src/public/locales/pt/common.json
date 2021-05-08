@@ -1,7 +1,9 @@
 {
   "welcome": "Bem-vindo a festa!",
   "me": {
-    "fullname": "Edson Paulo Gregorio",
+    "firstname": "Edson",
+    "first-surname": "Edson Gregório",
+    "fullname": "Edson Paulo Gregório",
     "email": "edsonpaulo24@gmail.com",
     "phone": "+244 942 682 194",
     "whatsapp": "+244 942 682 194"
@@ -24,7 +26,8 @@
   "section": {
     "about": {
       "title": "Sobre mim",
-      "subtitle": "um desenvolvedor web e mobile"
+      "subtitle": "desenvolvedor web e mobile",
+      "introduce": "Olá, sou o"
     },
     "skills": {
       "title": "Minhas habilidades",

@@ -4,17 +4,17 @@ import React from "react";
 
 import SectionTitle from "../section-title";
 
-const ContactSection: React.FC = () => {
+const SkillsSection: React.FC = () => {
   const { t } = useTranslation("common");
 
   return (
-    <Box minH="100%" flexDirection="column" justifyContent="space-between">
+    <Box>
       <Box>
-        <SectionTitle title={t("section.contact.title")} />
-        <Text as="h2">{t("section.contact.subtitle")}</Text>
+        <SectionTitle title={t("section.skills.title")} />
+        <Text as="h2">{t("section.skills.subtitle")}</Text>
       </Box>
     </Box>
   );
 };
 
-export default ContactSection;
+export default SkillsSection;

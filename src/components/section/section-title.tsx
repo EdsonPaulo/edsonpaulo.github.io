@@ -4,25 +4,25 @@ import React from "react";
 const SectionTitle: React.FC<{ title: string }> = ({ title }) => (
   <Box mb="6">
     <code>
-      <Text>{`</head>`}</Text>
+      <Text ml={["2", "4", "5"]}>{`<section>`}</Text>
     </code>
     <code>
-      <Text ml="2">{`<body>`}</Text>
+      <Text ml={["4", "6", "8"]}>{`<h1>`}</Text>
     </code>
-    <code>
-      <Text ml="6">{`<br />`}</Text>
-    </code>
-    <code>
-      <Text ml="6">{`<h1>`}</Text>
-    </code>
-    <Heading fontSize="7xl" ml="12" as="h1" color="accent">
+    <Heading
+      as="h1"
+      color="accent"
+      ml={["8", "10", "12"]}
+      textTransform="uppercase"
+      fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+    >
       {title}
     </Heading>
     <code>
-      <Text ml="6">{`</h1>`}</Text>
+      <Text ml={["4", "6", "8"]}>{`</h1>`}</Text>
     </code>
     <code>
-      <Text ml="6">{`<p>`}</Text>
+      <Text ml={["4", "6", "6"]}>{`<p>`}</Text>
     </code>
   </Box>
 );

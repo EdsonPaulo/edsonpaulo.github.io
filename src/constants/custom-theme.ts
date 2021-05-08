@@ -18,8 +18,8 @@ const CustomTheme = extendTheme(
       },
     },
     fonts: {
-      heading: FONTS.PlayfairDisplay,
-      body: FONTS.Cairo,
+      heading: "Itim",
+      body: "Itim",
     },
     styles: {
       global: {

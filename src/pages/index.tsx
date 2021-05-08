@@ -37,9 +37,9 @@ export default function Home() {
           <Sidebar />
 
           <Box ml="50px" flex={1}>
-            <Box minH="100vh" id="about" py="6" px="24">
-              <HomeSection />
-            </Box>
+
+            <HomeSection />
+
 
             <Box minH="100vh" id="skills" py="6" px="24" bg="dark.700">
               <SkillsSection />

@@ -1,7 +1,7 @@
 const COLORS = {
-  accent: "#FFA801",
+  accent0: "#FFA801",
+  accent: "crimson",
   light: "#ecf0f1",
-
   dark: {
     900: "#090909",
     800: "#121214",

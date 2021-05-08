@@ -4,21 +4,28 @@ import { useRouter } from "next/router";
 import React from "react";
 import { IoHeart, IoMail, IoLogoWhatsapp, IoChevronUp } from "react-icons/io5";
 
-import SocialNetworks from "../social-networks";
-
 const Footer: React.FC = () => {
   const { t } = useTranslation("common");
   const router = useRouter();
 
   return (
     <Box ml="100px" px="12" py="6" bg="dark.900" color="gray.300" fontSize="lg">
-      <Flex mb="4" alignItems="center" justifyContent="space-between">
-        <Box>
-          <Text letterSpacing="widest">{`(EPG) => {};`}</Text>
+      <Flex
+        mb="4"
+        alignItems="center"
+        justifyContent="space-between"
+        flexDirection={{ base: "column", md: "row" }}
+        textAlign={{ base: "center", md: "unset" }}
+      >
+        <Box mb={{ base: "4", md: "unset" }}>
           <Text color="gray.500">{t("me.fullname")}</Text>
+          <Text color="gray.500">{t("me.short-description")}</Text>
         </Box>
 
-        <Box>
+        <Flex
+          flexDirection="column"
+          alignItems={{ base: "center", md: "unset" }}
+        >
           <Flex alignItems="center">
             <IoMail />
             <Text ml="3">{t("me.email")}</Text>
@@ -27,7 +34,7 @@ const Footer: React.FC = () => {
             <IoLogoWhatsapp />
             <Text ml="3">{t("me.whatsapp")}</Text>
           </Flex>
-        </Box>
+        </Flex>
       </Flex>
 
       <Flex alignItems="center" justifyContent="space-between">
