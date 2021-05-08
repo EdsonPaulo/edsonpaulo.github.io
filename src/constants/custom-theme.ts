@@ -11,6 +11,7 @@ const CustomTheme = extendTheme(
       light: COLORS.light,
       dark: {
         900: COLORS.dark[900],
+        850: COLORS.dark[850],
         800: COLORS.dark[800],
         700: COLORS.dark[700],
         600: COLORS.dark[600],

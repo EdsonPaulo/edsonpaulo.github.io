@@ -37,25 +37,43 @@ export default function Home() {
           <Sidebar />
 
           <Box ml="50px" flex={1}>
-
             <HomeSection />
 
-
-            <Box minH="100vh" id="skills" py="6" px="24" bg="dark.700">
+            <Flex
+              alignItems="center"
+              minH="100vh"
+              id="skills"
+              py="8"
+              px="24"
+              bg="dark.850"
+            >
               <SkillsSection />
-            </Box>
+            </Flex>
 
-            <Box minH="100vh" id="experience" py="6" px="24">
+            <Flex
+              alignItems="center"
+              minH="100vh"
+              id="experience"
+              py="8"
+              px="24"
+            >
               <ExperienceSection />
-            </Box>
+            </Flex>
 
-            <Box minH="100vh" id="portfolio" py="6" px="24">
+            <Flex
+              alignItems="center"
+              minH="100vh"
+              id="portfolio"
+              py="8"
+              px="24"
+              bg="dark.850"
+            >
               <PortfolioSection />
-            </Box>
+            </Flex>
 
-            <Box minH="100vh" id="contact" py="6" px="24">
+            <Flex alignItems="center" minH="100vh" id="contact" py="8" px="24">
               <ContactSection />
-            </Box>
+            </Flex>
           </Box>
 
           <ScrollStatus />

@@ -34,21 +34,31 @@ const ContactForm: FC<ContactMessageFormProps> = ({
     <Box>
       <form onSubmit={handleSubmit(onSubmitContactMessage)}>
         <FormControl isRequired isInvalid={!!errors.name?.message}>
-          <FormLabel htmlFor="name">Seu Nome</FormLabel>
+          <FormLabel htmlFor="name">Nome</FormLabel>
           <Input
             id="name"
             {...register("name")}
             placeholder="ex: Edson Gregório"
+            p="3"
+            size="lg"
+            bg="dark.500"
+            fontSize="2xl"
+            variant="unstyled"
           />
           <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
         </FormControl>
 
-        <FormControl isRequired isInvalid={!!errors.email?.message}>
-          <FormLabel htmlFor="email">Seu Email</FormLabel>
+        <FormControl my="3" isRequired isInvalid={!!errors.email?.message}>
+          <FormLabel htmlFor="email">Email</FormLabel>
           <Input
             id="email"
             {...register("email")}
             placeholder="seunome@exemplo.com"
+            p="3"
+            size="lg"
+            bg="dark.500"
+            fontSize="2xl"
+            variant="unstyled"
           />
           <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
         </FormControl>
@@ -58,17 +68,27 @@ const ContactForm: FC<ContactMessageFormProps> = ({
           <Input
             id="subject"
             {...register("subject")}
-            placeholder="ex: Edson Gregório"
+            placeholder="ex: trabalho de freelancer"
+            p="3"
+            size="lg"
+            bg="dark.500"
+            fontSize="2xl"
+            variant="unstyled"
           />
           <FormErrorMessage>{errors.subject?.message}</FormErrorMessage>
         </FormControl>
 
-        <FormControl isRequired isInvalid={!!errors.message?.message}>
-          <FormLabel htmlFor="message">Seu comentário</FormLabel>
+        <FormControl my="3" isRequired isInvalid={!!errors.message?.message}>
+          <FormLabel htmlFor="message">Mensagem</FormLabel>
           <Textarea
             id="message"
             {...register("message")}
-            placeholder="Deixe aqui o seu comentário..."
+            placeholder="Deixe aqui o sua mensagem..."
+            p="3"
+            size="lg"
+            bg="dark.500"
+            fontSize="2xl"
+            variant="unstyled"
           />
           <FormErrorMessage>{errors.message?.message}</FormErrorMessage>
         </FormControl>
@@ -76,8 +96,11 @@ const ContactForm: FC<ContactMessageFormProps> = ({
         <Flex justifyContent="center">
           <Button
             mt={4}
+            size="lg"
             type="submit"
-            colorScheme="red"
+            bg="accent"
+            color="light"
+            colorScheme="whiteAlpha"
             alignSelf="flex-end"
             isLoading={isSubmitting}
           >
