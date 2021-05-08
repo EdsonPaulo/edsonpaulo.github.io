@@ -40,7 +40,7 @@ const ContactSection: React.FC = () => {
         </Box>
 
         <Box p="6" borderRadius="lg" bg="dark.700" shadow="lg">
-          <ContactForm />
+          <ContactForm onSubmitContactMessage={() => {}} />
         </Box>
       </SimpleGrid>
     </Box>
