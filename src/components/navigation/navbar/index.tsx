@@ -40,8 +40,10 @@ const Navbar: FC = () => {
   const toggleOpen = () => setIsOpen((open) => !open);
 
   const handleChangeLanguage = (changeLanguageTo: "pt" | "en") => {
-    if (locale && changeLanguageTo !== locale)
+    if (locale && changeLanguageTo !== locale) {
       replace(pathname, pathname, { locale: changeLanguageTo });
+      toggleOpen();
+    }
   };
 
   return (
