@@ -1,24 +1,30 @@
 {
-  "name": "edsonpaulo.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.tsx",
+  "name": "edsonpaulo",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "cd src && npm run build",
-    "start": "cd src && npm run start",
-    "dev": "cd src && npm run dev",
-    "deploy": "cd src && npm run deploy"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "next build && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EdsonPaulo/edsonpaulo.github.io.git"
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.0",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "@hookform/resolvers": "^2.4.0",
+    "framer-motion": "^4",
+    "next": "10.2.0",
+    "next-i18next": "^8.2.0",
+    "node-sass": "^5.0.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.4.2",
+    "react-icons": "^4.2.0",
+    "yup": "^0.32.9"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/EdsonPaulo/edsonpaulo.github.io/issues"
-  },
-  "homepage": "https://github.com/EdsonPaulo/edsonpaulo.github.io#readme",
-  "dependencies": {}
+  "devDependencies": {
+    "@types/react": "^17.0.5",
+    "typescript": "^4.2.4"
+  }
 }
