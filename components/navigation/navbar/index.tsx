@@ -1,7 +1,7 @@
 import { Button, IconButton } from "@chakra-ui/button";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useTranslation } from "next-i18next";
+import { useI18n } from "next-rosetta";
 import { useRouter } from "next/router";
 import React, { FC, useState } from "react";
 import {
@@ -13,6 +13,7 @@ import {
   BiUser,
   BiX,
 } from "react-icons/bi";
+import { ILocaleTable } from "../../../i18n";
 
 import ActiveLink from "../active-link";
 
@@ -34,7 +35,7 @@ const menuTransition = {
 
 const Navbar: FC = () => {
   const { pathname, locale, replace } = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => setIsOpen((open) => !open);

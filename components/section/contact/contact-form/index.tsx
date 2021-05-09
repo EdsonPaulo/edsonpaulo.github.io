@@ -10,19 +10,20 @@ import {
 import React, { FC } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useTranslation } from "react-i18next";
-
 import {
   ContactMessageFormProps,
   ContactMessageSchema,
   IContactMessage,
 } from "./contact.types";
+import { useI18n } from "next-rosetta";
+
+import { ILocaleTable } from "../../../../i18n";
 
 const ContactForm: FC<ContactMessageFormProps> = ({
   onSubmitContactMessage,
   isSubmitting,
 }) => {
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
   const {
     register,
     handleSubmit,
@@ -102,7 +103,7 @@ const ContactForm: FC<ContactMessageFormProps> = ({
             alignSelf="flex-end"
             isLoading={isSubmitting}
           >
-            {t("section.contact.send-message")}
+            {t("section.contact.sendMessage")}
           </Button>
         </Flex>
       </form>

@@ -1,6 +1,6 @@
 import { Button } from "@chakra-ui/button";
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { useTranslation } from "next-i18next";
+import { useI18n } from "next-rosetta";
 import { useRouter } from "next/router";
 import React, { FC } from "react";
 import {
@@ -10,13 +10,14 @@ import {
   BiEnvelope,
   BiUser,
 } from "react-icons/bi";
+import { ILocaleTable } from "../../../i18n";
 
 import ActiveLink from "../active-link";
 import styles from "../navigation.module.scss";
 
 const Sidebar: FC = () => {
   const { locale, push, asPath } = useRouter();
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
 
   const handleChangeLanguage = (changeLanguageTo: "pt" | "en") => {
     if (locale && changeLanguageTo !== locale)

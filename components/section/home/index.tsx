@@ -1,14 +1,15 @@
 import { IconButton } from "@chakra-ui/button";
 import { Flex, Heading } from "@chakra-ui/layout";
 import { Box, SimpleGrid, Text } from "@chakra-ui/react";
-import { useTranslation } from "next-i18next";
+import { useI18n } from "next-rosetta";
+import { ILocaleTable } from "../../../i18n";
 import React from "react";
 import Image from "next/image";
 
 import SocialNetworks from "../../social-networks";
 
 const HomeSection: React.FC = () => {
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
 
   return (
     <Flex

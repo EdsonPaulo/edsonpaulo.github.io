@@ -1,15 +1,23 @@
 import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
-import { useTranslation } from "next-i18next";
+import { useI18n } from "next-rosetta";
 import { useRouter } from "next/router";
 import React from "react";
 import { IoHeart, IoMail, IoLogoWhatsapp, IoChevronUp } from "react-icons/io5";
+import { ILocaleTable } from "../../i18n";
 
 const Footer: React.FC = () => {
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
   const router = useRouter();
 
   return (
-    <Box ml={{lg: "100px"}} px="12" py="6" bg="dark.900" color="gray.300" fontSize="lg">
+    <Box
+      ml={{ lg: "100px" }}
+      px="12"
+      py="6"
+      bg="dark.900"
+      color="gray.300"
+      fontSize="lg"
+    >
       <Flex
         mb="4"
         alignItems="center"
@@ -19,7 +27,7 @@ const Footer: React.FC = () => {
       >
         <Box mb={{ base: "4", md: "unset" }}>
           <Text color="gray.500">{t("me.fullname")}</Text>
-          <Text color="gray.500">{t("me.short-description")}</Text>
+          <Text color="gray.500">{t("me.shortDescription")}</Text>
         </Box>
 
         <Flex
@@ -40,7 +48,7 @@ const Footer: React.FC = () => {
       <Flex alignItems="center" justifyContent="space-between">
         <Box />
         <Flex alignItems="center" justifyContent="center">
-          <Text>{t("footer.created-by")}</Text>
+          <Text>{t("footer.createdBy")}</Text>
           <Text ml="2">
             <IoHeart color="crimson" />
           </Text>

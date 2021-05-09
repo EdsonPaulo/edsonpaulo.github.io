@@ -1,9 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { GetStaticProps } from "next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { I18nProps, useI18n } from "next-rosetta";
 import Head from "next/head";
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 import {
   ContactSection,
@@ -16,15 +15,11 @@ import {
   WorkHistorySection,
   //  ScrollStatus
 } from "../components";
-
-export const getStaticProps: GetStaticProps = async ({ locale = "pt" }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["common"])),
-  },
-});
+import { ILocaleTable } from "../i18n";
 
 export default function Home() {
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
+
   return (
     <>
       <Head>
@@ -75,3 +70,13 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<I18nProps<ILocaleTable>> = async ({
+  locale,
+  defaultLocale,
+}) => {
+  const { table = {} } = await import(
+    `../i18n/${locale || defaultLocale || "en"}`
+  );
+  return { props: { table } };
+};

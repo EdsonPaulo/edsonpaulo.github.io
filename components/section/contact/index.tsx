@@ -1,15 +1,16 @@
-import { Box, Center, Flex, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { useTranslation } from "next-i18next";
+import { Box, Center, Flex, Stack, Text } from "@chakra-ui/react";
+import { useI18n } from "next-rosetta";
 import React from "react";
-import { IoMail, IoLogoWhatsapp, IoMap } from "react-icons/io5";
 import { CgPhone } from "react-icons/cg";
+import { IoLogoWhatsapp, IoMail, IoMap } from "react-icons/io5";
 
+import { ILocaleTable } from "../../../i18n";
 import SocialNetworks from "../../social-networks";
 import SectionTitle from "../section-title";
 import ContactForm from "./contact-form";
 
 const ContactSection: React.FC = () => {
-  const { t } = useTranslation("common");
+  const { t } = useI18n<ILocaleTable>();
 
   return (
     <Box w="full" px={{ base: 5, md: 10 }} py={{ base: 8, md: 12 }}>
@@ -68,7 +69,7 @@ const ContactSection: React.FC = () => {
               textAlign="center"
               textTransform="uppercase"
             >
-              {t("section.contact.form-title")}
+              {t("section.contact.formTitle")}
             </Text>
             <ContactForm onSubmitContactMessage={() => {}} />
           </Box>
