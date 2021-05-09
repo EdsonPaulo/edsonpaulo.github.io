@@ -83,7 +83,7 @@ const Navbar: FC = () => {
         top={0}
         position="fixed"
         zIndex={89}
-        initial={false}
+        initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={menuVariants}
         transition={menuTransition}

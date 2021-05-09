@@ -1,7 +1,16 @@
 import { Box, Center, Container, Heading, Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
+import { GetStaticProps } from "next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import SocialNetworks from "../components/social-networks";
+
+export const getStaticProps: GetStaticProps = async ({ locale = "pt" }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
 
 export default function Home() {
   return (
