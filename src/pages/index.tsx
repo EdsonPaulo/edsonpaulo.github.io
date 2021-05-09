@@ -1,10 +1,11 @@
+import { Box, Center, Container, Heading, Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
-import { Box, Container, Heading, Stack } from "@chakra-ui/react";
+import SocialNetworks from "../components/social-networks";
 
 export default function Home() {
   return (
-    <Box bg="gray.800" minH="100vh">
+    <Box bg="dark.800" minH="100vh">
       <Head>
         <title>Edson Paulo - Portfolio</title>
         <meta name="description" content="Edson Paulo Gregório´s portfolio" />
@@ -20,32 +21,34 @@ export default function Home() {
         >
           <Stack
             p={[10, 20]}
-            bg="gray.900"
+            bg="dark.700"
+            spacing="6"
             borderWidth="2px"
             borderRadius="lg"
             textAlign="center"
-            borderColor="blue.900"
+            borderColor="accent"
           >
             <Heading
               fontSize={{ base: "3xl", md: "6xl" }}
-              color="goldenrod"
+              color="accent"
               as="h1"
             >
               EDSON´S PORTFOLIO
             </Heading>
             <Heading
-              mt="4"
               fontSize={{ base: "2xl", md: "4xl" }}
               color="whiteAlpha.600"
               as="h2"
             >
               S O O N
             </Heading>
+
+            <Center>
+              <SocialNetworks />
+            </Center>
           </Stack>
         </Container>
       </main>
-
-      <footer></footer>
     </Box>
   );
 }

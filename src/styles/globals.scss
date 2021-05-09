@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Itim";
+  src: url("../public/fonts/Itim.ttf");
+}
+@font-face {
+  font-family: "TradeGothic";
+  src: url("../public/fonts/TradeGothic.ttf");
+}
+@font-face {
+  font-family: "IndieFlower";
+  src: url("../public/fonts/IndieFlower.ttf");
+}
+
+$font-TradeGothic: "TradeGothic";
+$font-IndieFlower: "IndieFlower";
+$font-Itim: "Itim";
+
+/* colors variables */
+$dark-color: #1c1e1f;
+$light-color: #ecf0f1;
+$accent-color: crimson !default;
+$primary-color: #1e272e !default;
+
+$dark-900-color: #090909;
+$dark-800-color: #121214;
+$dark-700-color: #202024;
+$dark-600-color: #29292e;
+$dark-500-color: #323238;
+
+$dark-850-color: #0e0e10;
+
+* {
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: $light-color;
+  scroll-behavior: smooth;
+  font-family: $font-Itim, cursive, $font-TradeGothic, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif !important;
+}
+
+code {
+  letter-spacing: 1px;
+  display: block;
+  opacity: 0.6;
+  color: lightslategray;
+  font-size: large !important;
+  font-family: $font-IndieFlower, cursive !important;
+}
+
+button,
+a {
+  &:focus {
+    box-shadow: none !important;
+  }
+  &:hover,
+  &:active {
+    background: $dark-700-color !important;
+  }
+}
+
+/*** Custome any text selection ***/
+::-moz-selection {
+  color: $light-color;
+  background: $dark-500-color;
+}
+::selection {
+  color: $light-color;
+  background: $accent-color;
+}
+
+/*** Customisable scroolbar (not Firefox/IE) ***/
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $dark-800-color;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 6px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent-color;
+}
