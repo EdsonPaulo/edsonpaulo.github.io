@@ -1,7 +1,6 @@
 import {
   Box,
   FormControl,
-  FormLabel,
   Input,
   FormErrorMessage,
   Button,
@@ -11,6 +10,7 @@ import {
 import React, { FC } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useTranslation } from "react-i18next";
 
 import {
   ContactMessageFormProps,
@@ -22,6 +22,7 @@ const ContactForm: FC<ContactMessageFormProps> = ({
   onSubmitContactMessage,
   isSubmitting,
 }) => {
+  const { t } = useTranslation("common");
   const {
     register,
     handleSubmit,
@@ -31,64 +32,61 @@ const ContactForm: FC<ContactMessageFormProps> = ({
   });
 
   return (
-    <Box>
+    <Box flex={1}>
       <form onSubmit={handleSubmit(onSubmitContactMessage)}>
         <FormControl isRequired isInvalid={!!errors.name?.message}>
-          <FormLabel htmlFor="name">Nome</FormLabel>
           <Input
             id="name"
             {...register("name")}
-            placeholder="ex: Edson Gregório"
             p="3"
             size="lg"
             bg="dark.500"
             fontSize="2xl"
             variant="unstyled"
+            placeholder={t("section.contact.name")}
           />
           <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
         </FormControl>
 
         <FormControl my="3" isRequired isInvalid={!!errors.email?.message}>
-          <FormLabel htmlFor="email">Email</FormLabel>
           <Input
             id="email"
             {...register("email")}
-            placeholder="seunome@exemplo.com"
             p="3"
             size="lg"
             bg="dark.500"
             fontSize="2xl"
             variant="unstyled"
+            placeholder={t("section.contact.email")}
           />
           <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
         </FormControl>
 
         <FormControl isRequired isInvalid={!!errors.subject?.message}>
-          <FormLabel htmlFor="subject">Assunto</FormLabel>
           <Input
             id="subject"
             {...register("subject")}
-            placeholder="ex: trabalho de freelancer"
             p="3"
             size="lg"
             bg="dark.500"
             fontSize="2xl"
             variant="unstyled"
+            placeholder={t("section.contact.subject")}
           />
           <FormErrorMessage>{errors.subject?.message}</FormErrorMessage>
         </FormControl>
 
         <FormControl my="3" isRequired isInvalid={!!errors.message?.message}>
-          <FormLabel htmlFor="message">Mensagem</FormLabel>
           <Textarea
             id="message"
             {...register("message")}
-            placeholder="Deixe aqui o sua mensagem..."
             p="3"
             size="lg"
             bg="dark.500"
             fontSize="2xl"
             variant="unstyled"
+            resize="vertical"
+            placeholder={t("section.contact.message")}
           />
           <FormErrorMessage>{errors.message?.message}</FormErrorMessage>
         </FormControl>
@@ -104,7 +102,7 @@ const ContactForm: FC<ContactMessageFormProps> = ({
             alignSelf="flex-end"
             isLoading={isSubmitting}
           >
-            Send message
+            {t("section.contact.send-message")}
           </Button>
         </Flex>
       </form>

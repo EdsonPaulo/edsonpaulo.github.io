@@ -6,13 +6,15 @@
     "fullname": "Edson Paulo Gregório",
     "email": "edsonpaulo24@gmail.com",
     "phone": "+244 942 682 194",
-    "whatsapp": "+244 942 682 194"
+    "whatsapp": "+244 942 682 194",
+    "address": "Maianga, Luanda - Angola",
+    "short-description": "Desenvolvedor de apps web e mobile"
   },
   "nav": {
     "about": "Eu",
     "skills": "Skills",
     "portfolio": "Portfólio",
-    "experience": "Experiência",
+    "history": "Histórico",
     "contact": "Contacto",
     "blog": "Blog"
   },
@@ -33,8 +35,8 @@
       "title": "Minhas habilidades",
       "subtitle": ""
     },
-    "experience": {
-      "title": "Experiência profissional",
+    "history": {
+      "title": "Histórico profissional",
       "subtitle": ""
     },
     "portfolio": {
@@ -43,7 +45,13 @@
     },
     "contact": {
       "title": "Me contactar",
-      "subtitle": ""
+      "subtitle": "Se você alguma solicitação ou pergunta, não hesite em usar o formulário...",
+      "form-title": "Formulário de contacto",
+      "name": "Nome e sobrenome",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Deixe sua mensagem aqui...",
+      "send-message": "Enviar mensagem"
     },
     "blog": {
       "title": "Blog",

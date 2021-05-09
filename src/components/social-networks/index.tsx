@@ -19,7 +19,7 @@ const SocialButton: FC<{ href: string }> = ({ children, href }) => (
     bg="light"
     color="dark.900"
     borderRadius="full"
-    _hover={{ bg: "dark.500", color: "accent" }}
+    _hover={{ color: "light" }}
   >
     {children}
   </Link>

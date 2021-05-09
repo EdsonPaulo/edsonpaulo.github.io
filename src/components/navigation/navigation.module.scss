@@ -1,4 +1,4 @@
-.nav {
+.sidebar {
   a {
     position: relative;
     margin-bottom: 2px;
@@ -8,7 +8,7 @@
     display: -webkit-flex;
     justify-content: center;
     align-items: center;
-    font-size:  18pt;
+    font-size: 18pt;
 
     i {
       transition: 0.5s;
@@ -23,8 +23,15 @@
       text-transform: uppercase;
     }
     &:hover {
-      i {  opacity: 0; }
-      p { opacity: 1; }
+      i {
+        opacity: 0;
+      }
+      p {
+        opacity: 1;
+      }
     }
   }
+}
+
+.navbar {
 }

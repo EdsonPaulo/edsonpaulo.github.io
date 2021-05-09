@@ -6,39 +6,39 @@ import React from "react";
 import Image from "next/image";
 
 import SocialNetworks from "../../social-networks";
-import SectionTitle from "../section-title";
 
 const HomeSection: React.FC = () => {
   const { t } = useTranslation("common");
 
   return (
     <Flex
+      w="full"
       id="about"
-      py="8"
-      px="24"
       minH="100vh"
       flexDirection="column"
       justifyContent="space-between"
+      px={{ base: 5, md: 10 }}
+      py={12}
     >
       <Box>
         <code>
           <Text>{`</head>`}</Text>
         </code>
         <code>
-          <Text ml={["1", "2"]}>{`<body>`}</Text>
+          <Text>{`<body>`}</Text>
         </code>
         <code>
-          <Text ml={["2", "4", "5"]}>{`<section>`}</Text>
+          <Text ml={{ base: 2, md: 4, lg: 5 }}>{`<section>`}</Text>
         </code>
         <code>
-          <Text ml={["4", "6", "8"]}>{`<h1>`}</Text>
+          <Text ml={{ base: 4, md: 6, lg: 8 }}>{`<h1>`}</Text>
         </code>
 
         <Flex
-          ml={["8", "10", "12"]}
-          alignItems="center"
           flexWrap="wrap"
-          fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+          alignItems="center"
+          ml={{ base: 8, md: 10, lg: 12 }}
+          fontSize={{ base: "2xl", md: "3xl", lg: "5xl" }}
         >
           <Heading as="h1" color="light">
             {`${t("section.about.introduce")}`}
@@ -54,10 +54,14 @@ const HomeSection: React.FC = () => {
         </Flex>
 
         <code>
-          <Text ml={["4", "6", "8"]}>{`</h1>`}</Text>
+          <Text ml={{ base: 4, md: 6, lg: 8 }}>{`</h1>`}</Text>
         </code>
 
-        <SimpleGrid mt="8" gap={["4", "8", "12"]} columns={{ base: 1, md: 1, lg: 2 }}>
+        <SimpleGrid
+          mt="8"
+          gap={["4", "8", "12"]}
+          columns={{ base: 1, md: 1, lg: 2 }}
+        >
           <Box my="4" ml={["6", "8", "10"]}>
             <code>
               <Text>{`const onLoadInfo = () => {`}</Text>
@@ -128,7 +132,7 @@ const HomeSection: React.FC = () => {
         </SimpleGrid>
       </Box>
 
-      <Box mt="8" alignSelf="center">
+      <Box mt={{ base: "8" }} alignSelf="center">
         <SocialNetworks />
       </Box>
     </Flex>

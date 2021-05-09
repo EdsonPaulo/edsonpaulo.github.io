@@ -1,37 +1,38 @@
 import { Button } from "@chakra-ui/button";
-import { Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { FC } from "react";
 import {
   BiBriefcase,
   BiCodeAlt,
+  BiCoffee,
   BiEnvelope,
   BiUser,
-  BiCoffee,
 } from "react-icons/bi";
 
-import styles from "./sidebar.module.scss";
+import ActiveLink from "../active-link";
+import styles from "../navigation.module.scss";
 
-// const AnimatedFlex = motion(Flex, { forwardMotionProps: true });
-
-const Sidebar: React.FC = () => {
-  const { pathname, locale, replace } = useRouter();
+const Sidebar: FC = () => {
+  const { locale, push, asPath } = useRouter();
   const { t } = useTranslation("common");
 
   const handleChangeLanguage = (changeLanguageTo: "pt" | "en") => {
     if (locale && changeLanguageTo !== locale)
-      replace(pathname, pathname, { locale: changeLanguageTo });
+      push(asPath, asPath, { locale: changeLanguageTo });
   };
 
   return (
     <Flex
       px="4"
       py="6"
+      left={0}
+      w="100px"
       h="100vh"
       bg="dark.900"
-      alignItems="center"
       position="fixed"
+      alignItems="center"
       flexDirection="column"
       justifyContent="space-between"
     >
@@ -44,37 +45,37 @@ const Sidebar: React.FC = () => {
       </Flex>
 
       <nav>
-        <Flex flexDirection="column" className={styles.nav}>
-          <Link href="#about">
+        <Flex flexDirection="column" className={styles.sidebar}>
+          <ActiveLink href="#about">
             <i>
               <BiUser />
             </i>
             <Text>{t("nav.about")}</Text>
-          </Link>
-          <Link href="#skills">
+          </ActiveLink>
+          <ActiveLink href="#skills">
             <i>
               <BiCoffee />
             </i>
             <Text>{t("nav.skills")}</Text>
-          </Link>
-          <Link href="#experience">
+          </ActiveLink>
+          <ActiveLink href="#history">
             <i>
               <BiBriefcase />
             </i>
-            <Text>{t("nav.experience")}</Text>
-          </Link>
-          <Link href="#portfolio">
+            <Text>{t("nav.history")}</Text>
+          </ActiveLink>
+          <ActiveLink href="#portfolio">
             <i>
               <BiCodeAlt />
             </i>
             <Text>{t("nav.portfolio")}</Text>
-          </Link>
-          <Link href="#contact">
+          </ActiveLink>
+          <ActiveLink href="#contact">
             <i>
               <BiEnvelope />
             </i>
             <Text>{t("nav.contact")}</Text>
-          </Link>
+          </ActiveLink>
         </Flex>
       </nav>
 

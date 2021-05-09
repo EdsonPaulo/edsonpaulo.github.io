@@ -7,13 +7,14 @@
     "email": "edsonpaulo24@gmail.com",
     "phone": "+244 942 682 194",
     "whatsapp": "+244 942 682 194",
-    "address": "Maianga, Luanda - Angola"
+    "address": "Maianga, Luanda - Angola",
+    "short-description": "Web & mobile apps developer"
   },
   "nav": {
     "about": "Me",
     "skills": "Skills",
     "portfolio": "Portfolio",
-    "experience": "Experience",
+    "history": "History",
     "contact": "Contact",
     "blog": "Blog"
   },
@@ -28,13 +29,13 @@
     "about": {
       "title": "About me",
       "subtitle": "a web & mobile developer",
-      "introduce": "Hello, Im"
+      "introduce": "Hello, I´m"
     },
     "skills": {
       "title": "My Skills",
       "subtitle": ""
     },
-    "experience": {
+    "history": {
       "title": "Work History",
       "subtitle": ""
     },
@@ -44,7 +45,13 @@
     },
     "contact": {
       "title": "Contact me",
-      "subtitle": ""
+      "subtitle": "If you have any request or question, do not hesitate to use the form ...",
+      "form-title": "Contact form",
+      "name": "Name & surname",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Enter your message here...",
+      "send-message": "Send message"
     },
     "blog": {
       "title": "Blog",

@@ -9,14 +9,15 @@ import {
   ContactSection,
   Footer,
   HomeSection,
+  Navbar,
   PortfolioSection,
   Sidebar,
   SkillsSection,
-  ExperienceSection,
+  WorkHistorySection,
+  //  ScrollStatus
 } from "../components";
-import ScrollStatus from "../components/scroll-status";
 
-export const getStaticProps: GetStaticProps = async ({ locale = "en" }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale = "pt" }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
   },
@@ -32,51 +33,39 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Box display={{ lg: "none" }}>
+        <Navbar />
+      </Box>
+
       <main>
         <Flex>
-          <Sidebar />
+          <Box display={{ base: "none", lg: "block" }}>
+            <Sidebar />
+          </Box>
 
-          <Box ml="50px" flex={1}>
+          <Box ml={{ lg: "100px" }} mt={{ base: "20px", lg: "0px" }} flex={1}>
             <HomeSection />
 
-            <Flex
-              alignItems="center"
-              minH="100vh"
-              id="skills"
-              py="8"
-              px="24"
-              bg="dark.850"
-            >
+            <Flex minH="calc(100vh/1.2)" id="skills" bg="dark.850">
               <SkillsSection />
             </Flex>
 
-            <Flex
-              alignItems="center"
-              minH="100vh"
-              id="experience"
-              py="8"
-              px="24"
-            >
-              <ExperienceSection />
+            <Flex minH="calc(100vh/1.2)" id="history">
+              <WorkHistorySection />
             </Flex>
 
-            <Flex
-              alignItems="center"
-              minH="100vh"
-              id="portfolio"
-              py="8"
-              px="24"
-              bg="dark.850"
-            >
+            <Flex minH="calc(100vh/1.2)" id="portfolio" bg="dark.850">
               <PortfolioSection />
             </Flex>
 
-            <Flex alignItems="center" minH="100vh" id="contact" py="8" px="24">
+            <Flex minH="calc(100vh/1.2)" id="contact">
               <ContactSection />
             </Flex>
           </Box>
 
-          <ScrollStatus />
+          {/**
+            <ScrollStatus />
+          */}
         </Flex>
       </main>
 

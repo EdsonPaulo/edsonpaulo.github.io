@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   const router = useRouter();
 
   return (
-    <Box ml="100px" px="12" py="6" bg="dark.900" color="gray.300" fontSize="lg">
+    <Box ml={{lg: "100px"}} px="12" py="6" bg="dark.900" color="gray.300" fontSize="lg">
       <Flex
         mb="4"
         alignItems="center"
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
           icon={<IoChevronUp />}
           borderColor="dark.700"
           borderWidth="1px"
-          onClick={() => router.replace("#home")}
+          onClick={() => router.replace("#about")}
         />
       </Flex>
     </Box>
