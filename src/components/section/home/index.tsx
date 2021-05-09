@@ -18,7 +18,7 @@ const HomeSection: React.FC = () => {
       flexDirection="column"
       justifyContent="space-between"
       px={{ base: 5, md: 10 }}
-      py={12}
+      py={{ base: 8, md: 12 }}
     >
       <Box>
         <code>

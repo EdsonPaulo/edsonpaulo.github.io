@@ -43,7 +43,7 @@ export default function Home() {
             <Sidebar />
           </Box>
 
-          <Box ml={{ lg: "100px" }} mt={{ base: "20px", lg: "0px" }} flex={1}>
+          <Box ml={{ lg: "100px" }} mt={{ base: 8, lg: 0 }} flex={1}>
             <HomeSection />
 
             <Flex minH="calc(100vh/1.2)" id="skills" bg="dark.850">
