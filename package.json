@@ -7,7 +7,8 @@
     "build": "cd src && npm run build",
     "start": "cd src && npm run start",
     "export": "cd src && npm run export",
-    "dev": "cd src && npm run dev"
+    "dev": "cd src && npm run dev",
+    "deploy": "cd src && npm run deploy"
   },
   "repository": {
     "type": "git",
