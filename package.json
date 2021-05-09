@@ -6,6 +6,7 @@
   "scripts": {
     "build": "cd src && npm run build",
     "start": "cd src && npm run start",
+    "export": "cd src && npm run export",
     "dev": "cd src && npm run dev"
   },
   "repository": {

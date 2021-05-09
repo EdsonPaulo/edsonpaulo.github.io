@@ -1,4 +1,5 @@
 const { i18n } = require("./next-i18next.config");
+const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
 
 const localeSubpaths = {
   en: "en",
@@ -12,4 +13,5 @@ module.exports = {
   publicRuntimeConfig: {
     localeSubpaths,
   },
+  assetPrefix: ghPages ? "/edsonpaulo.github.io/" : "", // customize this value
 };
