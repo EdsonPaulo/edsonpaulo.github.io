@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "postbuild": "cp -a out/. ../build"
+    "start": "next start"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.6.0",
