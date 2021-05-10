@@ -1,4 +1,4 @@
-import { Box, Flex, Link } from "@chakra-ui/react";
+import { Flex, Link } from "@chakra-ui/react";
 import React, { FC } from "react";
 import {
   FaGithubAlt,

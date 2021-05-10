@@ -1,12 +1,12 @@
 import { Box, Flex, IconButton, Text } from "@chakra-ui/react";
-import { useI18n } from "next-rosetta";
 import { useRouter } from "next/router";
 import React from "react";
 import { IoHeart, IoMail, IoLogoWhatsapp, IoChevronUp } from "react-icons/io5";
-import { ILocaleTable } from "../../i18n";
+
+import { useTranslation } from "../../hooks";
 
 const Footer: React.FC = () => {
-  const { t } = useI18n<ILocaleTable>();
+  const { t } = useTranslation();
   const router = useRouter();
 
   return (

@@ -15,15 +15,14 @@ import {
   ContactMessageSchema,
   IContactMessage,
 } from "./contact.types";
-import { useI18n } from "next-rosetta";
-
-import { ILocaleTable } from "../../../../i18n";
+import { useTranslation } from "../../../../hooks";
 
 const ContactForm: FC<ContactMessageFormProps> = ({
   onSubmitContactMessage,
   isSubmitting,
 }) => {
-  const { t } = useI18n<ILocaleTable>();
+  const { t } = useTranslation();
+
   const {
     register,
     handleSubmit,

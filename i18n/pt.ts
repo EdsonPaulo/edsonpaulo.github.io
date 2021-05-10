@@ -1,7 +1,8 @@
-import { ILocaleTable } from "./index";
+import { Locales } from "../constants/enums";
+import { ILangDictionary } from "./i18n.types";
 
-export const table: ILocaleTable = {
-  locale: "Português",
+export const langDictionary: ILangDictionary = {
+  locale: Locales.Portuguese,
   welcome: "Bem-vindo a festa!",
   me: {
     firstname: "Edson",

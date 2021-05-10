@@ -1,13 +1,12 @@
 import { Box, Text } from "@chakra-ui/react";
-import { useI18n } from "next-rosetta";
 import React from "react";
 
-import { ILocaleTable } from "../../../i18n";
-
+import { useTranslation } from "../../../hooks";
 import SectionTitle from "../section-title";
 
 const WorkHistorySection: React.FC = () => {
-  const { t } = useI18n<ILocaleTable>();
+  const { t } = useTranslation();
+
 
   return (
     <Box w="full" px={{ base: 5, md: 10 }} py={{ base: 8, md: 12 }}>

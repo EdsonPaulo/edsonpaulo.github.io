@@ -28,7 +28,7 @@ const ActiveLink: React.FC<{
       transition="all 200ms ease-in-out"
       href={href}
       onClick={handleClick}
-      color={asPath === `/${href}` ? "accent" : "light"}
+      color={asPath.includes(href) ? "accent" : "light"}
     >
       {children}
       <BiChevronRight />
@@ -37,7 +37,7 @@ const ActiveLink: React.FC<{
     <Link
       href={href}
       onClick={handleClick}
-      color={asPath === `/${href}` ? "accent" : "light"}
+      color={asPath.includes(href) ? "accent" : "light"}
     >
       {children}
     </Link>

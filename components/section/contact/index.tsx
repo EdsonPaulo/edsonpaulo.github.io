@@ -1,16 +1,15 @@
 import { Box, Center, Flex, Stack, Text } from "@chakra-ui/react";
-import { useI18n } from "next-rosetta";
 import React from "react";
 import { CgPhone } from "react-icons/cg";
 import { IoLogoWhatsapp, IoMail, IoMap } from "react-icons/io5";
 
-import { ILocaleTable } from "../../../i18n";
+import { useTranslation } from "../../../hooks";
 import SocialNetworks from "../../social-networks";
 import SectionTitle from "../section-title";
 import ContactForm from "./contact-form";
 
 const ContactSection: React.FC = () => {
-  const { t } = useI18n<ILocaleTable>();
+  const { t } = useTranslation();
 
   return (
     <Box w="full" px={{ base: 5, md: 10 }} py={{ base: 8, md: 12 }}>
