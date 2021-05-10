@@ -1,24 +1,35 @@
 import { NextPageContext } from "next";
-import nookies from "nookies";
+import nookies, { setCookie } from "nookies";
 
-import { Locales, LocalStorageKeys } from "../constants/enums";
+import { Languages, LocalStorageKeys } from "../constants/enums";
 
-export const storeCookie = (ctx: NextPageContext, key: string, value: string) =>
-  nookies.set(ctx, key, value, {
-    maxAge: 30 * 24 * 60 * 60,
-    sameSite: "Strict",
-    path: "/",
-  });
+const cookieOptions = {
+  maxAge: 30 * 24 * 60 * 60,
+  sameSite: "Strict",
+  path: "/",
+};
 
-export const getI18nLocale = async (context: NextPageContext) => {
-  const cookies = nookies.get(context);
-  let locale = cookies[LocalStorageKeys.Language];
+export const storeLocaleCookie = (
+  newLanguage: Languages,
+  ctx?: NextPageContext
+) => {
+  ctx
+    ? nookies.set(ctx, LocalStorageKeys.Language, newLanguage, cookieOptions)
+    : setCookie(null, LocalStorageKeys.Language, newLanguage, cookieOptions);
+};
 
-  if (!locale) {
-    locale = Locales.English;
-    storeCookie(context, LocalStorageKeys.Language, locale);
+export const getI18nLocale = async (ctx: NextPageContext) => {
+  const cookies = nookies.get(ctx);
+  let language = cookies[LocalStorageKeys.Language];
+
+  if (
+    !language ||
+    (language !== Languages.English && language !== Languages.Portuguese)
+  ) {
+    language = Languages.English;
+    storeLocaleCookie(Languages.English, ctx);
   }
 
-  const { langDictionary = {} } = await import(`../i18n/${locale}`);
-  return { locale, langDictionary };
+  const { langDictionary = {} } = await import(`../i18n/${language}`);
+  return { language, langDictionary };
 };

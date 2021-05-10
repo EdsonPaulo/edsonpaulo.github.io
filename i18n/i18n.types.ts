@@ -1,21 +1,21 @@
 import { ReactNode } from "react";
 import { Rosetta } from "rosetta";
-import { Locales } from "../constants/enums";
+import { Languages } from "../constants/enums";
 
 export interface I18nState {
-  activeLocale: string;
-  locale: (l: Locales, dict: any) => void;
+  activeLanguage: Languages;
+  locale: (l: Languages, dict: any) => void;
   t: Rosetta<ILangDictionary>["t"];
 }
 
 export interface I18nProps {
-  locale: Locales;
+  language: Languages;
   langDictionary: Record<string, any>;
   children: ReactNode;
 }
 
 export interface ILangDictionary {
-  locale: Locales;
+  locale: Languages;
   welcome: string;
   me: {
     firstname: string;

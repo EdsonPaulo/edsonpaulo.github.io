@@ -1,6 +1,4 @@
-import { Button } from "@chakra-ui/button";
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 import React, { FC } from "react";
 import {
   BiBriefcase,
@@ -12,17 +10,11 @@ import {
 
 import { useTranslation } from "../../../hooks";
 import ActiveLink from "../active-link";
+import LanguageSwitcher from "../language-switcher";
 import styles from "../navigation.module.scss";
 
 const Sidebar: FC = () => {
-  const { locale, push, asPath } = useRouter();
   const { t } = useTranslation();
-
-
-  const handleChangeLanguage = (changeLanguageTo: "pt" | "en") => {
-    if (locale && changeLanguageTo !== locale)
-      push(asPath, asPath, { locale: changeLanguageTo });
-  };
 
   return (
     <Flex
@@ -80,27 +72,7 @@ const Sidebar: FC = () => {
         </Flex>
       </nav>
 
-      <Flex fontSize="16pt" flexDirection="column">
-        <Button
-          fontSize="lg"
-          letterSpacing="widest"
-          _hover={{ bg: "dark.700" }}
-          onClick={() => handleChangeLanguage("pt")}
-          color={!locale || locale === "pt" ? "accent" : "light"}
-        >
-          PT
-        </Button>
-        <Button
-          mt="1"
-          fontSize="lg"
-          letterSpacing="widest"
-          _hover={{ bg: "dark.700" }}
-          onClick={() => handleChangeLanguage("en")}
-          color={locale === "en" ? "accent" : "light"}
-        >
-          EN
-        </Button>
-      </Flex>
+      <LanguageSwitcher />
     </Flex>
   );
 };

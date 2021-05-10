@@ -1,7 +1,6 @@
 const FONTS = {
-  Cairo: "Cairo",
   TradeGothic: "TradeGothic",
-  PlayfairDisplay: "PlayfairDisplay",
+  Itim: "Itim",
 };
 
 export default FONTS;

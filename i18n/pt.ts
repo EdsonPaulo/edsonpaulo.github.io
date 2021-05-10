@@ -1,8 +1,8 @@
-import { Locales } from "../constants/enums";
+import { Languages } from "../constants/enums";
 import { ILangDictionary } from "./i18n.types";
 
 export const langDictionary: ILangDictionary = {
-  locale: Locales.Portuguese,
+  locale: Languages.Portuguese,
   welcome: "Bem-vindo a festa!",
   me: {
     firstname: "Edson",

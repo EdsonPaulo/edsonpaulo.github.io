@@ -7,7 +7,7 @@ import React, {
   useState,
 } from "react";
 import rosetta from "rosetta";
-import { Locales } from "../constants/enums";
+import { Languages } from "../constants/enums";
 
 import { I18nProps, I18nState } from "./i18n.types";
 
@@ -16,40 +16,40 @@ const i18n = rosetta();
 export const selectPluralRule = (count: number) =>
   new Intl.PluralRules().select(count);
 
-export const defaultLanguage: Locales = Locales.English;
+export const defaultLanguage: Languages = Languages.English;
 
 export const I18nContext = createContext({} as I18nState);
 
 i18n.locale(defaultLanguage);
 
 export const I18n = forwardRef<I18nState, I18nProps>(
-  ({ children, locale, langDictionary }, ref) => {
-    const activeLocaleRef = useRef(locale || defaultLanguage);
+  ({ children, language, langDictionary }, ref) => {
+    const activeLanguageRef = useRef(language || defaultLanguage);
     const [, setTick] = useState(0);
     const firstRender = useRef(true);
 
     const i18nWrapper: I18nState = {
-      activeLocale: activeLocaleRef.current,
+      activeLanguage: activeLanguageRef.current,
       t: (...args) => i18n.t(...args),
       locale: (l, dict) => {
         i18n.locale(l);
-        activeLocaleRef.current = l;
+        activeLanguageRef.current = l;
         if (dict) i18n.set(l, dict);
         setTick((tick) => tick + 1);
       },
     };
 
-    if (locale && firstRender.current === true) {
+    if (language && firstRender.current === true) {
       firstRender.current = false;
-      i18nWrapper.locale(locale, langDictionary);
+      i18nWrapper.locale(language, langDictionary);
     }
 
     useImperativeHandle(ref, () => i18nWrapper);
 
     useEffect(() => {
-      if (locale) i18nWrapper.locale(locale, langDictionary);
+      if (language) i18nWrapper.locale(language, langDictionary);
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [langDictionary, locale]);
+    }, [langDictionary, language]);
 
     return (
       <I18nContext.Provider value={i18nWrapper}>

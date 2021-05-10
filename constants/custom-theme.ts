@@ -1,5 +1,4 @@
 import { extendTheme, withDefaultVariant } from "@chakra-ui/react";
-import { CgSmileNone } from "react-icons/cg";
 
 import COLORS from "./colors";
 import FONTS from "./fonts";
@@ -19,8 +18,8 @@ const CustomTheme = extendTheme(
       },
     },
     fonts: {
-      heading: "Itim",
-      body: "Itim",
+      heading: FONTS.Itim,
+      body: FONTS.Itim,
     },
     styles: {
       global: {
@@ -32,7 +31,7 @@ const CustomTheme = extendTheme(
         a: {
           _hover: {
             color: COLORS.accent,
-            textDecoration: "undeline",
+            textDecoration: "none",
           },
         },
       },
