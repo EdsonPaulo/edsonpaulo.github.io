@@ -38,7 +38,7 @@ const CustomTheme = extendTheme(
     },
   },
   withDefaultVariant({
-    variant: "ghost",
+    variant: "ghost" as any,
     components: ["IconButton", "Button"],
   })
 );
