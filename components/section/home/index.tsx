@@ -11,11 +11,12 @@ const HomeSection: React.FC = () => {
     <Flex
       w="full"
       id="about"
-      minH="100vh"
+      minH="90vh"
       flexDirection="column"
       justifyContent="space-between"
       px={{ base: 5, md: 10 }}
-      py={{ base: 8, md: 12 }}
+      pb={{ base: 8, md: 12 }}
+      pt={{ base: 8, md: 6 }}
     >
       <Box>
         <code>

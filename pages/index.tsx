@@ -1,55 +1,69 @@
-import { Box, Center, Container, Heading, Stack } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
 
-import SocialNetworks from "../components/social-networks";
+import {
+  ContactSection,
+  Footer,
+  HomeSection,
+  Navbar,
+  PortfolioSection,
+  Sidebar,
+  SkillsSection,
+  WorkHistorySection,
+} from "../components";
+import { useTranslation } from "../hooks";
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
-    <Box bg="dark.800" minH="100vh">
+    <>
       <Head>
-        <title>Edson Paulo - Portfolio</title>
-        <meta name="description" content="Edson Paulo Gregório´s portfolio" />
+        <title>{t("meta.title")} </title>
+        <meta name="description" content={t("meta.description")} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Container
-          centerContent
-          maxWidth="container.lg"
-          minHeight="100vh"
-          justifyContent="center"
-        >
-          <Stack
-            p={[10, 20]}
-            bg="dark.700"
-            spacing="6"
-            borderWidth="2px"
-            borderRadius="lg"
-            textAlign="center"
-            borderColor="accent"
-          >
-            <Heading
-              fontSize={{ base: "3xl", md: "6xl" }}
-              color="accent"
-              as="h1"
-            >
-              EDSON´S PORTFOLIO
-            </Heading>
-            <Heading
-              fontSize={{ base: "2xl", md: "4xl" }}
-              color="whiteAlpha.600"
-              as="h2"
-            >
-              S O O N
-            </Heading>
+      <Box display={{ lg: "none" }}>
+        <Navbar />
+      </Box>
 
-            <Center>
-              <SocialNetworks />
-            </Center>
-          </Stack>
-        </Container>
+      <main>
+        <Flex>
+          <Box display={{ base: "none", lg: "block" }}>
+            <Sidebar />
+          </Box>
+
+          <Box ml={{ lg: "100px" }} mt={{ base: 8, lg: 0 }} flex={1}>
+            <HomeSection />
+
+            <Flex minH="100vh" id="skills" bg="dark.850">
+              <SkillsSection />
+            </Flex>
+
+            <Flex minH="100vh" id="history">
+              <WorkHistorySection />
+            </Flex>
+
+            <Flex minH="100vh" id="portfolio" bg="dark.850">
+              <PortfolioSection />
+            </Flex>
+
+            <Flex minH="100vh" id="contact">
+              <ContactSection />
+            </Flex>
+          </Box>
+
+          {/**
+            <ScrollStatus />
+          */}
+        </Flex>
       </main>
-    </Box>
+
+      <footer>
+        <Footer />
+      </footer>
+    </>
   );
 }
