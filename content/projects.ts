@@ -58,7 +58,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js 16", "React 19", "Expo", "Supabase", "TanStack Query", "Tailwind 4"],
     tags: ["web", "mobile", "ai"],
-    liveUrl: "https://auravoy.vercel.app",
     image: "/projects/auravoy.jpg",
   },
   {
@@ -74,7 +73,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js", "Amadeus API", "OpenAI", "Supabase", "Upstash", "Leaflet"],
     tags: ["web", "ai"],
-    liveUrl: "https://traviro.vercel.app",
     image: "/projects/traviro.jpg",
   },
   {
@@ -90,7 +88,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js 15", "Claude", "OpenAI TTS", "Supabase", "epub.js", "Expo"],
     tags: ["web", "mobile", "ai"],
-    liveUrl: "https://pageryn.vercel.app",
     image: "/projects/pageryn.jpg",
   },
   {
@@ -136,7 +133,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js", "PrimeReact", "Spring Boot", "Spring Security", "MySQL", "Spring AI"],
     tags: ["web", "backend"],
-    liveUrl: "https://fila-livre.vercel.app",
   },
   {
     slug: "zapvendas",
@@ -151,7 +147,6 @@ export const projects: Project[] = [
     },
     stack: ["Next.js", "Supabase", "React Hook Form", "Recharts"],
     tags: ["web"],
-    liveUrl: "https://zap-vendas-rho.vercel.app",
     image: "/projects/zapvendas.jpg",
   },
 
@@ -263,7 +258,6 @@ export const projects: Project[] = [
     pitch: { en: "Pharmacy storefront with catalogue and cart, plus a Node/PostgreSQL API.", pt: "Loja online de farmácia com catálogo e carrinho, mais uma API Node/PostgreSQL." },
     stack: ["React", "TypeScript", "Chakra UI", "Express", "Sequelize"],
     tags: ["web"],
-    liveUrl: "https://pharmacy-react-app.vercel.app",
     repoUrl: gh("pharmacy-react-app"),
   },
   {
@@ -286,7 +280,6 @@ export const projects: Project[] = [
     pitch: { en: "How-to blog designed in Figma, with its own REST API, auth and uploads.", pt: "Blog de tutoriais desenhado no Figma, com API REST própria, autenticação e uploads." },
     stack: ["React", "TypeScript", "Express", "MongoDB", "JWT"],
     tags: ["web", "backend"],
-    liveUrl: "https://como-fazer-edsonpaulo.vercel.app",
     repoUrl: gh("como-fazer-blog-frontend"),
   },
   {
@@ -298,7 +291,6 @@ export const projects: Project[] = [
     pitch: { en: "Interactive map explorer.", pt: "Explorador de mapas interativo." },
     stack: ["React", "Redux", "Material UI", "Leaflet"],
     tags: ["web"],
-    liveUrl: "https://epg-open-map.vercel.app",
     repoUrl: gh("epg-open-map"),
   },
   {
