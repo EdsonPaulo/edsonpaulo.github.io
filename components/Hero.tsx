@@ -43,7 +43,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
             src="/img/edson.jpg"
             alt={profile.name}
             width={816}
-            height={1142}
+            height={994}
             priority
             className="h-auto w-full rounded-[2rem] lg:h-[min(28rem,calc(100svh-13rem))] lg:w-auto"
           />

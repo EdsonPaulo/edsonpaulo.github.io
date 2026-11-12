@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t.meta.description,
       url: `/${locale}/`,
       locale: locale === "pt" ? "pt_PT" : "en_US",
-      images: [{ url: "/img/edson.jpg", width: 816, height: 1142, alt: profile.name }],
+      images: [{ url: "/img/edson.jpg", width: 816, height: 994, alt: profile.name }],
     },
     twitter: { card: "summary", title: t.meta.title, description: t.meta.description, images: ["/img/edson.jpg"] },
     icons: { icon: "/favicon.ico" },
