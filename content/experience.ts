@@ -2,6 +2,8 @@ import type { L } from "./types";
 
 export type Role = {
   company: string;
+  /** company website, shown next to the name */
+  url?: string;
   title: L;
   period: L;
   summary: L;
@@ -13,6 +15,7 @@ export type Role = {
 export const experience: Role[] = [
   {
     company: "sheerME",
+    url: "https://sheerme.com",
     title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
@@ -72,6 +75,7 @@ export const experience: Role[] = [
   },
   {
     company: "Fisgar BR",
+    url: "https://fisgar.com.br",
     title: { en: "Frontend Developer", pt: "Frontend Developer" },
     period: { en: "Jul 2021 – Feb 2023", pt: "Jul 2021 – Fev 2023" },
     summary: {
@@ -82,6 +86,7 @@ export const experience: Role[] = [
   },
   {
     company: "Mochi Noir & Met-Care",
+    url: "https://met-care.com",
     title: { en: "Project Manager", pt: "Gestor de Projeto" },
     period: { en: "May – Aug 2021", pt: "Mai – Ago 2021" },
     summary: {

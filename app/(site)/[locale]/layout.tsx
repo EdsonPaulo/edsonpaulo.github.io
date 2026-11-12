@@ -42,7 +42,7 @@ const personJsonLd = {
   "@type": "Person",
   name: profile.name,
   jobTitle: "Senior Software Engineer & Tech Lead",
-  worksFor: { "@type": "Organization", name: "sheerME" },
+  worksFor: { "@type": "Organization", name: "sheerME", url: "https://sheerme.com" },
   address: { "@type": "PostalAddress", addressLocality: "Luanda", addressCountry: "AO" },
   alumniOf: "Universidade Católica de Angola",
   url: profile.site,

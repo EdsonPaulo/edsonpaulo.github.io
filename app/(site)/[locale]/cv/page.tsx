@@ -47,6 +47,11 @@ export default async function CV({ params }: { params: Promise<{ locale: string 
             <div className="flex items-baseline justify-between gap-4">
               <h3 className="font-bold">
                 {role.company} <span className="font-normal text-[#16131a]/70">/ {role.title[locale]}</span>
+                {role.url && (
+                  <a href={role.url} className="ml-2 text-[8.5pt] font-normal text-[#16131a]/60">
+                    {strip(role.url)}
+                  </a>
+                )}
               </h3>
               <span className="shrink-0 text-[8.5pt] text-[#16131a]/60">{role.period[locale]}</span>
             </div>

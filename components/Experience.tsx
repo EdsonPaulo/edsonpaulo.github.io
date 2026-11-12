@@ -1,4 +1,5 @@
 import type { Dict } from "@/content/i18n";
+import { FiArrowUpRight } from "react-icons/fi";
 import { experience } from "@/content/experience";
 import type { Locale } from "@/content/types";
 import { Rich } from "./Rich";
@@ -19,6 +20,17 @@ export function Experience({ t, locale }: { t: Dict; locale: Locale }) {
               {role.company}
               <span className="font-normal text-muted"> / {role.title[locale]}</span>
             </h3>
+            {role.url && (
+              <a
+                href={role.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 inline-flex items-center gap-1 text-sm text-annot transition-colors hover:text-crimson"
+              >
+                {role.url.replace(/^https?:\/\//, "")}
+                <FiArrowUpRight aria-hidden />
+              </a>
+            )}
             <p className="mt-3 max-w-2xl leading-relaxed text-paper/75">
               <Rich text={role.summary[locale]} />
             </p>
