@@ -37,6 +37,28 @@
   }
 }
 
+/* Faint hand-drawn tech doodles, like a chat wallpaper, framing the page: hero fades down, contact fades up.
+   Opacity is baked into the SVG. */
+.doodle { position: relative; isolation: isolate; }
+.doodle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("/bg/doodle.svg") 0 0 / 420px repeat;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+.doodle-up::before { mask-image: linear-gradient(to top, #000 55%, transparent); }
+
+/* Printable CV (/[locale]/cv/): light sheet, key phrases stay dark instead of the site's paper colour. */
+.cv strong { color: #16131a; }
+@page { size: A4; margin: 12mm 14mm; }
+@media print {
+  html { color-scheme: light; }
+  html, body { background: #fff; }
+}
+
 /* The one orchestrated moment: hero annotations write in, then the name settles. */
 @keyframes write-in {
   from { clip-path: inset(0 100% 0 0); }

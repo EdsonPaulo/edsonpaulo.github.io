@@ -12,32 +12,24 @@ export const profile = {
   socials: {
     github: "https://github.com/EdsonPaulo",
     linkedin: "https://www.linkedin.com/in/edsonpaulo1",
-    instagram: "https://instagram.com/edsonpaulo24",
   },
   intro: {
     en: "Senior engineer and team lead who ships web and mobile products end to end: from the first commit to the App Store, with payments, four languages and AI built in. I've done it for marketplaces used every day in Europe and South America, and for my own AI products.",
     pt: "Engenheiro sénior e team lead que lança produtos web e mobile de ponta a ponta: do primeiro commit à App Store, com pagamentos, quatro idiomas e IA de raiz. Já o fiz em marketplaces usados todos os dias na Europa e na América do Sul, e nos meus próprios produtos com IA.",
   } as L,
+  /** **phrase** marks what a skimming recruiter should catch; keep it to one or two per paragraph. */
   about: [
     {
-      en: "I'm a product-minded engineer with an obsession for clean, organised, reusable code. For six years I've been taking products from an empty repository to the App Store and Play Store: booking marketplaces, e-commerce, delivery apps, finance tools and AI products.",
-      pt: "Sou um engenheiro com mentalidade de produto e obcecado por código limpo, organizado e reutilizável. Há seis anos que levo produtos de um repositório vazio até à App Store e à Play Store: marketplaces de marcações, e-commerce, apps de entregas, ferramentas financeiras e produtos com IA.",
+      en: "I'm a product-minded engineer who takes products **from an empty repo to the App Store and Play Store**. For six years I've shipped booking marketplaces, e-commerce, delivery apps, finance tools and AI products, always with **clean, reusable code**.",
+      pt: "Sou um engenheiro com mentalidade de produto que leva produtos **de um repositório vazio até à App Store e à Play Store**. Há seis anos que lanço marketplaces de marcações, e-commerce, apps de entregas, ferramentas financeiras e produtos com IA, sempre com **código limpo e reutilizável**.",
     },
     {
-      en: "I've been leading teams since 2020. I've led frontend and mobile teams, run delivery as a project manager, and today I set the architecture, review the code and mentor the engineers building a marketplace used daily in Portugal and Brazil.",
-      pt: "Lidero equipas desde 2020. Já liderei equipas de frontend e mobile, geri entregas como gestor de projeto, e hoje defino a arquitetura, reviso o código e oriento os engenheiros que constroem um marketplace usado diariamente em Portugal e no Brasil.",
+      en: "I've **led teams since 2020**: frontend and mobile teams, delivery as a project manager, and today the architecture, code review and mentoring behind a marketplace used daily in Portugal and Brazil. Along the way: **three production frontends from scratch**, 4,000+ commits and **payments on every surface**, from Apple Pay and Pix to Tap to Pay.",
+      pt: "**Lidero equipas desde 2020**: frontend e mobile, entregas como gestor de projeto e, hoje, a arquitetura, a revisão de código e a mentoria por trás de um marketplace usado diariamente em Portugal e no Brasil. Pelo caminho: **três frontends de produção criados do zero**, 4.000+ commits e **pagamentos em todas as plataformas**, de Apple Pay e Pix a Tap to Pay.",
     },
     {
-      en: "The results speak for themselves: three production frontends started from scratch, more than 4,000 commits on apps people use every day, and payments on every surface, from cards, Apple Pay, Google Pay and Pix to marketplace payouts and Tap to Pay on the phone.",
-      pt: "Os resultados falam por si: três frontends de produção criados do zero, mais de 4.000 commits em apps que as pessoas usam todos os dias, e pagamentos em todas as plataformas, de cartões, Apple Pay, Google Pay e Pix a pagamentos a parceiros de marketplace e Tap to Pay no telemóvel.",
-    },
-    {
-      en: "I also build my own AI products, from idea to launch: personalised children's books, a travel copilot, whole books turned into audio episodes. I move across the whole stack: React, React Native and Next.js on the front; Node, Prisma, Spring Boot or Flask behind it; OpenAI and Claude when the product needs intelligence.",
-      pt: "Também crio os meus próprios produtos com IA, da ideia ao lançamento: livros infantis personalizados, um copiloto de viagens, livros inteiros transformados em episódios áudio. Domino todo o stack: React, React Native e Next.js no frontend; Node, Prisma, Spring Boot ou Flask por trás; OpenAI e Claude quando o produto precisa de inteligência.",
-    },
-    {
-      en: "If you need someone who can own a product, lead the people building it and still care about the last pixel, I'm the person to talk to.",
-      pt: "Se precisas de alguém capaz de assumir um produto, liderar quem o constrói e ainda cuidar do último pixel, sou a pessoa certa.",
+      en: "I also build **my own AI products**, from idea to launch. If you need someone who can own a product, lead the people building it and still care about the last pixel, **let's talk**.",
+      pt: "Também crio **os meus próprios produtos com IA**, da ideia ao lançamento. Se precisas de alguém capaz de assumir um produto, liderar quem o constrói e ainda cuidar do último pixel, **vamos falar**.",
     },
   ] as L[],
   stats: [

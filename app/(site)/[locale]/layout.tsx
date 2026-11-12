@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import { dict } from "@/content/i18n";
 import { profile } from "@/content/profile";
 import { isLocale, locales } from "@/content/types";
-import "../globals.css";
+import "../../globals.css";
 
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], axes: ["wdth"], variable: "--font-bricolage", display: "swap" });
 const caveat = Caveat({ subsets: ["latin"], variable: "--font-caveat", display: "swap" });

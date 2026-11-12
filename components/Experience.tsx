@@ -1,6 +1,7 @@
 import type { Dict } from "@/content/i18n";
 import { experience } from "@/content/experience";
 import type { Locale } from "@/content/types";
+import { Rich } from "./Rich";
 import { Section } from "./Section";
 
 export function Experience({ t, locale }: { t: Dict; locale: Locale }) {
@@ -18,15 +19,19 @@ export function Experience({ t, locale }: { t: Dict; locale: Locale }) {
               {role.company}
               <span className="font-normal text-muted"> / {role.title[locale]}</span>
             </h3>
-            <p className="mt-3 max-w-2xl leading-relaxed text-paper/85">{role.summary[locale]}</p>
+            <p className="mt-3 max-w-2xl leading-relaxed text-paper/75">
+              <Rich text={role.summary[locale]} />
+            </p>
             {role.stack && <p className="mt-2 text-sm text-annot">{role.stack}</p>}
 
             {role.points && (
-              <ul className="mt-5 max-w-2xl space-y-3 text-paper/85">
+              <ul className="mt-5 max-w-2xl space-y-2.5 text-paper/75">
                 {role.points.map((p, j) => (
                   <li key={j} className="flex gap-3 leading-relaxed">
                     <span aria-hidden className="mt-2.5 h-px w-4 shrink-0 bg-crimson" />
-                    {p[locale]}
+                    <span>
+                      <Rich text={p[locale]} />
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -40,7 +45,9 @@ export function Experience({ t, locale }: { t: Dict; locale: Locale }) {
                     <div key={p.name} className="grid gap-1 px-5 py-4 md:grid-cols-[12rem_1fr] md:gap-6">
                       <dt className="font-semibold">{p.name}</dt>
                       <dd>
-                        <p className="leading-relaxed text-paper/85">{p.note[locale]}</p>
+                        <p className="leading-relaxed text-paper/75">
+                          <Rich text={p.note[locale]} />
+                        </p>
                         <p className="mt-1 text-sm text-annot">{p.stack}</p>
                       </dd>
                     </div>

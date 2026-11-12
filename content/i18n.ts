@@ -37,6 +37,7 @@ const en = {
     whatsapp: "Message on WhatsApp",
     or: "Or reach me directly",
   },
+  cv: { file: "CV (PDF)", old: "Previous CV, 2023 (PDF)", projects: "Selected products" },
   footer: { top: "Back to top" },
 };
 
@@ -79,6 +80,7 @@ const pt: Dict = {
     whatsapp: "Enviar mensagem no WhatsApp",
     or: "Ou contacta-me diretamente",
   },
+  cv: { file: "CV (PDF)", old: "CV anterior, 2023 (PDF)", projects: "Produtos em destaque" },
   footer: { top: "Voltar ao topo" },
 };
 

@@ -27,7 +27,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <Section id="projects" title={t.projects.title}>
           <Projects t={t} locale={locale} />
         </Section>
-        <Section id="contact" title={t.contact.title}>
+        <Section id="contact" title={t.contact.title} className="doodle doodle-up">
           <p className="max-w-2xl text-lg leading-relaxed text-paper/85">{t.contact.intro}</p>
           <div className="mt-10 grid gap-14 lg:grid-cols-[1fr_18rem]">
             <ContactForm t={t} />

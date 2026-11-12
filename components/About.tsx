@@ -1,14 +1,17 @@
 import type { Dict } from "@/content/i18n";
 import { profile } from "@/content/profile";
 import type { Locale } from "@/content/types";
+import { Rich } from "./Rich";
 import { Section } from "./Section";
 
 export function About({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <Section id="about" title={t.about.title}>
-      <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-paper/90">
+      <div className="max-w-2xl space-y-5 text-lg leading-relaxed text-paper/75">
         {profile.about.map((p, i) => (
-          <p key={i}>{p[locale]}</p>
+          <p key={i}>
+            <Rich text={p[locale]} />
+          </p>
         ))}
       </div>
       <dl className="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 xl:grid-cols-5">

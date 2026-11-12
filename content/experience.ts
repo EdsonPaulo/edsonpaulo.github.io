@@ -16,34 +16,30 @@ export const experience: Role[] = [
     title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
-      en: "I lead the frontend of a beauty and wellness marketplace used every day in Portugal and Brazil, and own its customer and business apps on iOS, Android and the web, from architecture to store release.",
-      pt: "Lidero o frontend de um marketplace de beleza e bem-estar usado todos os dias em Portugal e no Brasil, e sou responsável pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
+      en: "I **lead the frontend** of a beauty and wellness marketplace used every day in Portugal and Brazil, and own its customer and business apps on iOS, Android and the web, from architecture to store release.",
+      pt: "**Lidero o frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal e no Brasil, e sou responsável pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
     },
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [
       {
-        en: "#1 contributor of all time on both mobile apps (2,700+ commits). Took them from the first Expo release to Expo SDK 57, React Native 0.86 and React 19 without slowing the release train.",
-        pt: "Maior contribuidor de sempre nas duas apps mobile (2.700+ commits). Levei-as do primeiro release Expo até ao Expo SDK 57, React Native 0.86 e React 19 sem travar o ritmo de releases.",
+        en: "**#1 contributor of all time** on both mobile apps (2,700+ commits), upgraded through to Expo SDK 57 and React 19 without slowing releases.",
+        pt: "**Maior contribuidor de sempre** nas duas apps mobile (2.700+ commits); atualizei-as até ao Expo SDK 57 e React 19 sem travar os releases.",
       },
       {
-        en: "Started three production frontends from scratch: the business app (2022), the PRO back office (2023) and the new marketplace website (2025).",
-        pt: "Criei três frontends de produção do zero: a app de negócios (2022), o back office PRO (2023) e o novo site do marketplace (2025).",
+        en: "**Three production frontends from scratch**: the business app (2022), the PRO back office (2023) and the marketplace website (2025).",
+        pt: "**Três frontends de produção criados do zero**: a app de negócios (2022), o back office PRO (2023) e o site do marketplace (2025).",
       },
       {
-        en: "Built payments on every surface: cards, Apple Pay, Google Pay, Pix, Stripe Connect payouts for salons and in-person Tap to Pay with Stripe Terminal.",
-        pt: "Implementei pagamentos em todas as plataformas: cartões, Apple Pay, Google Pay, Pix, pagamentos Stripe Connect para salões e Tap to Pay presencial com Stripe Terminal.",
+        en: "**Payments everywhere**: cards, Apple Pay, Google Pay, Pix, Stripe Connect payouts and Tap to Pay.",
+        pt: "**Pagamentos em todo o lado**: cartões, Apple Pay, Google Pay, Pix, Stripe Connect e Tap to Pay.",
       },
       {
-        en: "Designed and built, alone, a WhatsApp booking assistant that books real appointments against the live calendar and hands off to a human when needed.",
-        pt: "Desenhei e construí sozinho um assistente de marcações no WhatsApp que marca horários reais na agenda e passa a conversa para um humano quando é preciso.",
+        en: "**4 languages and 2 white-label brands** from one codebase.",
+        pt: "**4 idiomas e 2 marcas white-label** a partir do mesmo código.",
       },
       {
-        en: "Every app ships in four languages (pt-PT, pt-BR, en, es), and the business app builds as two white-label brands from one codebase.",
-        pt: "Todas as apps saem em quatro idiomas (pt-PT, pt-BR, en, es) e a app de negócios gera duas marcas white-label a partir do mesmo código.",
-      },
-      {
-        en: "Set the architecture and conventions the team builds on; review, mentor and pair with the frontend engineers.",
-        pt: "Defino a arquitetura e as convenções em que a equipa trabalha; faço revisão, mentoria e pair programming com os engenheiros frontend.",
+        en: "**Set the architecture** the team builds on; code review, mentoring and pairing.",
+        pt: "**Defino a arquitetura** em que a equipa trabalha; revisão de código, mentoria e pair programming.",
       },
     ],
     products: [
@@ -54,22 +50,22 @@ export const experience: Role[] = [
       },
       {
         name: "PRO & Salon app",
-        note: { en: "Calendar, bookings, clients and in-person payments for salons. Built from day one.", pt: "Agenda, marcações, clientes e pagamentos presenciais para salões. Construída desde o primeiro dia." },
+        note: { en: "Calendar, bookings, clients and in-person payments for salons.", pt: "Agenda, marcações, clientes e pagamentos presenciais para salões." },
         stack: "Expo, React Native, Stripe Terminal",
       },
       {
         name: "PRO web",
-        note: { en: "Back office with calendars, rosters, marketing campaigns and a WhatsApp inbox. Built from day one.", pt: "Back office com agendas, escalas, campanhas de marketing e caixa de entrada WhatsApp. Construído desde o primeiro dia." },
+        note: { en: "Back office with calendars, rosters, marketing campaigns and a WhatsApp inbox.", pt: "Back office com agendas, escalas, campanhas de marketing e caixa de entrada WhatsApp." },
         stack: "Next.js, MUI, React Query, Stripe Connect",
       },
       {
         name: "Marketplace website",
-        note: { en: "Search, multi-cart checkout and the loyalty club, rebuilt on the App Router. Built from day one.", pt: "Pesquisa, checkout com vários carrinhos e clube de fidelização, reconstruído no App Router. Construído desde o primeiro dia." },
+        note: { en: "Search, multi-cart checkout and the loyalty club, rebuilt on the App Router.", pt: "Pesquisa, checkout com vários carrinhos e clube de fidelização, reconstruído no App Router." },
         stack: "Next.js App Router, next-intl, TanStack Query, Mapbox",
       },
       {
         name: "WhatsApp booking assistant",
-        note: { en: "Clients pick a service and time inside WhatsApp; bookings are validated against the real calendar.", pt: "O cliente escolhe serviço e horário no WhatsApp; a marcação é validada na agenda real." },
+        note: { en: "Books real appointments inside WhatsApp against the live calendar, with hand-off to a human. **Built alone.**", pt: "Marca horários reais no WhatsApp, validados na agenda, com passagem para um humano. **Feito sozinho.**" },
         stack: "Node, TypeScript, Prisma, PostgreSQL, OpenAI",
       },
     ],
@@ -89,8 +85,8 @@ export const experience: Role[] = [
     title: { en: "Project Manager", pt: "Gestor de Projeto" },
     period: { en: "May – Aug 2021", pt: "Mai – Ago 2021" },
     summary: {
-      en: "Promoted to run delivery across two client products: planned and split the work, led the team rituals and owned code review.",
-      pt: "Promovido para gerir a entrega de dois produtos de clientes: planeei e distribuí o trabalho, conduzi os rituais da equipa e fiquei responsável pela revisão de código.",
+      en: "**Promoted** to run delivery across two client products: planned and split the work, led the team rituals and owned code review.",
+      pt: "**Promovido** para gerir a entrega de dois produtos de clientes: planeei e distribuí o trabalho, conduzi os rituais da equipa e fiquei responsável pela revisão de código.",
     },
   },
   {
@@ -98,8 +94,8 @@ export const experience: Role[] = [
     title: { en: "Mobile Lead & Frontend Developer", pt: "Mobile Lead & Frontend Developer" },
     period: { en: "Sep 2020 – May 2021", pt: "Set 2020 – Mai 2021" },
     summary: {
-      en: "Built e-commerce platforms and digital stores. Led mobile development in React Native with a team of 4+ developers, and shipped web storefronts and landing pages in React.",
-      pt: "Construí plataformas de e-commerce e lojas digitais. Liderei o desenvolvimento mobile em React Native com uma equipa de 4+ programadores e lancei lojas web e landing pages em React.",
+      en: "Built e-commerce platforms and digital stores. **Led mobile development** in React Native with a team of 4+ developers, and shipped web storefronts and landing pages in React.",
+      pt: "Construí plataformas de e-commerce e lojas digitais. **Liderei o desenvolvimento mobile** em React Native com uma equipa de 4+ programadores e lancei lojas web e landing pages em React.",
     },
     stack: "React Native, React, TypeScript, Redux, Jest",
   },
@@ -108,8 +104,8 @@ export const experience: Role[] = [
     title: { en: "Frontend Lead & UI Designer", pt: "Frontend Lead & UI Designer" },
     period: { en: "Feb – Sep 2020", pt: "Fev – Set 2020" },
     summary: {
-      en: "Led the frontend of a mid-size project: planned it, designed the UI in Figma and split the work across the frontend team, then built the web and mobile apps.",
-      pt: "Liderei o frontend de um projeto de média dimensão: planeei-o, desenhei a UI no Figma e distribuí o trabalho pela equipa de frontend, e depois construí as apps web e mobile.",
+      en: "**Led the frontend** of a mid-size project: planned it, designed the UI in Figma and split the work across the frontend team, then built the web and mobile apps.",
+      pt: "**Liderei o frontend** de um projeto de média dimensão: planeei-o, desenhei a UI no Figma e distribuí o trabalho pela equipa de frontend, e depois construí as apps web e mobile.",
     },
     stack: "Angular, React Native, REST APIs, SCSS, Figma",
   },

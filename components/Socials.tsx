@@ -1,11 +1,10 @@
-import { FaGithub, FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import { profile } from "@/content/profile";
 
 const items = [
   { href: profile.socials.github, label: "GitHub", Icon: FaGithub },
   { href: profile.socials.linkedin, label: "LinkedIn", Icon: FaLinkedinIn },
   { href: `https://wa.me/${profile.whatsapp}`, label: "WhatsApp", Icon: FaWhatsapp },
-  { href: profile.socials.instagram, label: "Instagram", Icon: FaInstagram },
 ];
 
 export function Socials({ className = "" }: { className?: string }) {

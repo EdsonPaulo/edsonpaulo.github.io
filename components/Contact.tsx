@@ -1,6 +1,6 @@
 "use client";
 
-import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
+import { FiDownload, FiFileText, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import type { Dict } from "@/content/i18n";
 import { profile } from "@/content/profile";
@@ -68,6 +68,19 @@ export function ContactDetails({ t, locale }: { t: Dict; locale: Locale }) {
         <li className="inline-flex items-center gap-3">
           <FiMapPin aria-hidden className="text-muted" />
           {profile.location[locale]}
+        </li>
+        {/* Two CV options for now; delete the one you don't want. */}
+        <li>
+          <a href={`/cv/edson-gregorio-cv-${locale}.pdf`} download className="inline-flex items-center gap-3 hover:text-crimson">
+            <FiDownload aria-hidden className="text-muted" />
+            {t.cv.file}
+          </a>
+        </li>
+        <li>
+          <a href="/cv/edson-gregorio-cv-2023.pdf" download className="inline-flex items-center gap-3 hover:text-crimson">
+            <FiFileText aria-hidden className="text-muted" />
+            {t.cv.old}
+          </a>
         </li>
       </ul>
       <Socials className="-ml-3 mt-6" />

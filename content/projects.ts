@@ -214,7 +214,8 @@ export const projects: Project[] = [
     name: "Atlas Fit",
     year: "2026",
     kind: "product",
-    visible: true,
+    visible: false,
+    note: "Hidden at your request.",
     status: prototype,
     pitch: {
       en: "AI-generated training plans that adapt progression to performance and recovery.",
@@ -242,7 +243,8 @@ export const projects: Project[] = [
     name: "Before & After",
     year: "2023",
     kind: "product",
-    visible: true,
+    visible: false,
+    note: "Hidden at your request.",
     pitch: {
       en: "Drop two photos and get a side-by-side comparison image, rendered entirely in the browser.",
       pt: "Larga duas fotos e recebe uma imagem de comparação lado a lado, gerada no próprio browser.",

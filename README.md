@@ -30,6 +30,16 @@ All text lives in `content/`. The components only render it.
 
 Every text field has an `en` and a `pt` version.
 
+## CV (PDF)
+
+`/en/cv/` and `/pt/cv/` render a printable A4 CV from the same `content/` files. After editing content, regenerate the PDFs and commit them (needs Google Chrome; set `CHROME=/path` if it is elsewhere):
+
+```bash
+npm run cv
+```
+
+This writes `public/cv/edson-gregorio-cv-{en,pt}.pdf`. `public/cv/edson-gregorio-cv-2023.pdf` is the older hand-made CV, linked from Contact as a second option.
+
 ## Deploy
 
 - **GitHub Pages:** `.github/workflows/deploy.yml` builds and publishes `out/` on every push to `main`. In the repo settings, set Pages → Source to "GitHub Actions".

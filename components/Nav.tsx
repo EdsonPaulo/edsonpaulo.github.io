@@ -28,18 +28,26 @@ export function Nav({ t, locale }: { t: Dict; locale: Locale }) {
             </li>
           ))}
         </ul>
-        <Link
-          href={`/${other}/`}
-          hrefLang={other}
-          lang={other}
-          aria-label={t.nav.switchTo}
-          title={t.nav.switchTo}
-          className="ml-auto rounded-full border border-line px-3 py-1 text-sm text-muted transition-colors hover:border-crimson hover:text-paper md:ml-0"
-        >
-          <span className={locale === "pt" ? "text-paper" : ""}>PT</span>
-          <span className="mx-1 text-line">/</span>
-          <span className={locale === "en" ? "text-paper" : ""}>EN</span>
-        </Link>
+        <div role="group" aria-label="Language" className="ml-auto flex rounded-full border border-line p-0.5 text-xs font-semibold md:ml-0">
+          {(["en", "pt"] as const).map((l) =>
+            l === locale ? (
+              <span key={l} aria-current="true" className="rounded-full bg-crimson px-2.5 py-1 text-ink">
+                {l.toUpperCase()}
+              </span>
+            ) : (
+              <Link
+                key={l}
+                href={`/${l}/`}
+                hrefLang={l}
+                lang={l}
+                title={t.nav.switchTo}
+                className="rounded-full px-2.5 py-1 text-muted transition-colors hover:text-paper"
+              >
+                {l.toUpperCase()}
+              </Link>
+            ),
+          )}
+        </div>
         <MobileMenu links={links} labels={{ open: t.nav.menu, close: t.nav.close }} />
       </nav>
     </header>

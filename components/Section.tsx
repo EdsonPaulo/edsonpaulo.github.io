@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import { Annot } from "./Annot";
 
-export function Section({ id, title, aside, children }: { id: string; title: string; aside?: ReactNode; children: ReactNode }) {
+export function Section({ id, title, aside, className = "", children }: { id: string; title: string; aside?: ReactNode; className?: string; children: ReactNode }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="border-t border-line">
+    <section id={id} aria-labelledby={`${id}-title`} className={`border-t border-line ${className}`}>
       <div className="mx-auto grid max-w-6xl gap-x-12 gap-y-8 px-4 py-20 sm:px-8 md:py-28 lg:grid-cols-[16rem_1fr]">
         <header className="lg:sticky lg:top-24 lg:self-start">
           <Annot>{`<section id="${id}">`}</Annot>
