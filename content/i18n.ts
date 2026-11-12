@@ -43,7 +43,7 @@ export type Dict = typeof en;
 
 const pt: Dict = {
   meta: {
-    title: "Edson Gregório — Senior Software Engineer & Tech Lead",
+    title: "Edson Gregório — Engenheiro de Software Sénior & Tech Lead",
     description:
       "Edson Paulo Gregório é engenheiro de software sénior e tech lead. Mais de 6 anos a desenhar, construir e escalar produtos web e mobile com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
   },

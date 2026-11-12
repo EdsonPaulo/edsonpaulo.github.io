@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { dict } from "@/content/i18n";
 import { profile } from "@/content/profile";
+import { coreStack } from "@/content/skills";
 import { isLocale, locales } from "@/content/types";
 import "../../globals.css";
 
@@ -30,6 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t.meta.description,
       url: `/${locale}/`,
       locale: locale === "pt" ? "pt_PT" : "en_US",
+      alternateLocale: locale === "pt" ? "en_US" : "pt_PT",
+      siteName: profile.shortName,
       images: [{ url: "/img/edson.jpg", width: 816, height: 994, alt: profile.name }],
     },
     twitter: { card: "summary", title: t.meta.title, description: t.meta.description, images: ["/img/edson.jpg"] },
@@ -41,10 +44,13 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: profile.name,
+  alternateName: [profile.shortName, "Edson Paulo"],
   jobTitle: "Senior Software Engineer & Tech Lead",
   worksFor: { "@type": "Organization", name: "sheerME", url: "https://sheerme.com" },
   address: { "@type": "PostalAddress", addressLocality: "Luanda", addressCountry: "AO" },
-  alumniOf: "Universidade Católica de Angola",
+  alumniOf: { "@type": "CollegeOrUniversity", name: "Universidade Católica de Angola" },
+  knowsAbout: coreStack,
+  knowsLanguage: ["pt", "en"],
   url: profile.site,
   image: `${profile.site}/img/edson.jpg`,
   sameAs: Object.values(profile.socials),
