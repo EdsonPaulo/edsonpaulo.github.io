@@ -53,6 +53,8 @@
 
 /* Printable CV (/[locale]/cv/): light sheet, key phrases stay dark instead of the site's paper colour. */
 .cv strong { color: #16131a; }
+/* Keep the CV's tinted panels when printing to PDF. */
+.cv { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
 @page { size: A4; margin: 12mm 14mm; }
 @media print {
   html { color-scheme: light; }

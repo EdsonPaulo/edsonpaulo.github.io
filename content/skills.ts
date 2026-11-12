@@ -1,5 +1,8 @@
 import type { L } from "./types";
 
+/** Shown first, with logos, as the stack I'm strongest in (icons are mapped in components/Skills.tsx). */
+export const coreStack = ["TypeScript", "React", "Next.js", "React Native", "Expo", "Node.js", "PostgreSQL", "Supabase", "Tailwind CSS", "Stripe", "AI / LLMs", "Figma"];
+
 /** First items in each group are the ones I use most; keep that order when editing. */
 export const skills: { group: L; items: string[] }[] = [
   { group: { en: "Languages", pt: "Linguagens" }, items: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3 / Sass", "Java", "Python", "Dart", "SQL", "C"] },

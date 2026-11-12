@@ -24,7 +24,7 @@ const en = {
     archiveIntro: "University and early-career projects, all open source.",
     empty: "No projects in this category yet.",
   },
-  skills: { title: "Skills", education: "Education", languages: "Languages" },
+  skills: { title: "Skills", core: "Core stack", education: "Education", languages: "Languages" },
   contact: {
     title: "Contact",
     intro: "Hiring for a senior or lead role, or have a product to build? Let's talk. The form opens your email app with the message ready to send, and I usually reply within a day.",
@@ -35,7 +35,7 @@ const en = {
     whatsapp: "Message on WhatsApp",
     or: "Or reach me directly",
   },
-  cv: { file: "CV (PDF)", old: "Previous CV, 2023 (PDF)", projects: "Selected products" },
+  cv: { file: "CV (PDF)", old: "Previous CV, 2023 (PDF)", projects: "Selected products", profile: "Profile" },
   footer: { top: "Back to top" },
 };
 
@@ -65,7 +65,7 @@ const pt: Dict = {
     archiveIntro: "Projetos da universidade e do início de carreira, todos open source.",
     empty: "Ainda não há projetos nesta categoria.",
   },
-  skills: { title: "Competências", education: "Formação", languages: "Idiomas" },
+  skills: { title: "Competências", core: "Stack principal", education: "Formação", languages: "Idiomas" },
   contact: {
     title: "Contato",
     intro: "Estás a contratar para uma função sénior ou de liderança, ou tens um produto para construir? Vamos falar. O formulário abre a tua app de email com a mensagem pronta a enviar, e normalmente respondo em menos de 24 horas.",
@@ -76,7 +76,7 @@ const pt: Dict = {
     whatsapp: "Enviar mensagem no WhatsApp",
     or: "Ou contacta-me diretamente",
   },
-  cv: { file: "CV (PDF)", old: "CV anterior, 2023 (PDF)", projects: "Produtos em destaque" },
+  cv: { file: "CV (PDF)", old: "CV anterior, 2023 (PDF)", projects: "Produtos em destaque", profile: "Perfil" },
   footer: { top: "Voltar ao topo" },
 };
 
