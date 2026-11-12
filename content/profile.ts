@@ -14,8 +14,8 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/edsonpaulo1",
   },
   intro: {
-    en: "Senior software engineer and tech lead who designs, builds and scales web and mobile products end to end: from architecture and the first commit to the App Store, with payments, multi-language support and AI built in. Marketplaces used every day across Europe and South America run on my work, and I create my own AI products on top.",
-    pt: "Engenheiro de software sénior e tech lead que desenha, constrói e escala produtos web e mobile de ponta a ponta: da arquitetura e do primeiro commit à App Store, com pagamentos, suporte multi-idioma e IA de raiz. Marketplaces usados todos os dias na Europa e na América do Sul correm sobre o meu trabalho, e ainda crio os meus próprios produtos com IA.",
+    en: "I design, build and scale web and mobile products end to end, from architecture to the App Store, with payments, multi-language and AI built in. Marketplaces used daily across Europe and South America run on my work, and I ship my own AI products too.",
+    pt: "Desenho, construo e escalo produtos web e mobile de ponta a ponta, da arquitetura à App Store, com pagamentos, multi-idioma e IA de raiz. Marketplaces usados diariamente na Europa e na América do Sul correm sobre o meu trabalho, e também lanço os meus próprios produtos com IA.",
   } as L,
   /** **phrase** marks what a skimming recruiter should catch; keep it to one or two per paragraph. */
   about: [
