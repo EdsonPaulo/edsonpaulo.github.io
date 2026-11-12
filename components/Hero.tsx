@@ -16,7 +16,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
               {t.hero.hello}
             </span>
             <span
-              className="settle mt-1 block text-[clamp(3.4rem,13vw,9.5rem)] font-extrabold leading-[0.86] tracking-[-0.04em] [font-stretch:75%]"
+              className="settle mt-1 block text-[clamp(2.5rem,8vw,5.5rem)] font-extrabold leading-[0.86] tracking-[-0.04em] [font-stretch:75%]"
               style={{ animationDelay: "0.35s" }}
             >
               Edson
@@ -37,7 +37,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
         </div>
 
         {/* On desktop the photo sits at the top and is sized by viewport height, so photo and caption fit in the first screen. */}
-        <figure className="relative mx-auto w-64 lg:mx-0 lg:mt-26 lg:w-auto lg:self-start lg:justify-self-end">
+        <figure className="relative mx-auto w-64 lg:mx-0 lg:mt-20 lg:w-auto lg:self-start lg:justify-self-end">
           <Annot className="absolute -top-8 left-0">{"const me = () => {"}</Annot>
           <Image
             src="/img/edson.jpg"
