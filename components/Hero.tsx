@@ -8,7 +8,7 @@ import { Socials } from "./Socials";
 export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <section id="top" className="doodle overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-end gap-12 px-4 pb-20 pt-6 sm:px-8 md:pt-10 lg:grid-cols-[1fr_20rem]">
+      <div className="mx-auto grid max-w-6xl items-end gap-12 px-4 pb-20 pt-6 sm:px-8 md:pt-10 lg:grid-cols-[1fr_auto]">
         <div>
           <Annot className="write-in block">{"<h1>"}</Annot>
           <h1 className="mt-3">
