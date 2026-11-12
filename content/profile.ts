@@ -41,7 +41,7 @@ export const profile = {
   ] as { value: string; label: L }[],
   education: {
     school: { en: "Catholic University of Angola", pt: "Universidade Católica de Angola" } as L,
-    degree: { en: "BSc in Computer Science, 2023", pt: "Licenciatura em Engenharia Informática, 2023" } as L,
+    degree: { en: "Bachelor’s degree in Computer Engineering, 2023", pt: "Licenciatura em Engenharia Informática, 2023" } as L,
   },
   languages: [
     { en: "Portuguese, native", pt: "Português, nativo" },
