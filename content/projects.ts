@@ -52,6 +52,7 @@ export const projects: Project[] = [
     kind: "product",
     featured: true,
     visible: true,
+    status: wip,
     pitch: {
       en: "An AI travel companion whose home screen changes with each stage of the trip: plan, budget with receipt scanning, keep documents and memories.",
       pt: "Um companheiro de viagem com IA cujo ecrã principal muda a cada fase da viagem: planear, orçamento com leitura de recibos, documentos e memórias.",
@@ -66,7 +67,8 @@ export const projects: Project[] = [
     year: "2026",
     kind: "product",
     featured: true,
-    visible: true,
+    visible: false,
+    note: "Hidden at your request: Auravoy is the main product in use.",
     pitch: {
       en: "Swipe through very cheap real flight deals, then let an AI agent plan the whole trip around the fare you picked.",
       pt: "Passa por voos reais muito baratos em formato swipe e deixa um agente de IA planear a viagem à volta da tarifa escolhida.",
@@ -82,6 +84,7 @@ export const projects: Project[] = [
     kind: "product",
     featured: true,
     visible: true,
+    status: wip,
     pitch: {
       en: "Splits whole books into 3–8 minute episodes with cliffhangers, to read or listen to like a series.",
       pt: "Divide livros inteiros em episódios de 3 a 8 minutos com suspense no fim, para ler ou ouvir como uma série.",
