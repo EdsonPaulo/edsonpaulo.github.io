@@ -8,7 +8,7 @@ import { Socials } from "./Socials";
 export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <section id="top" className="doodle overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-end gap-12 px-4 pb-20 pt-6 sm:px-8 md:pt-10 lg:grid-cols-[1fr_auto]">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-10 sm:px-8 md:pt-20 lg:grid-cols-[1fr_auto]">
         <div>
           <Annot className="write-in block">{"<h1>"}</Annot>
           <h1 className="mt-3">
@@ -37,7 +37,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
         </div>
 
         {/* On desktop the photo sits at the top and is sized by viewport height, so photo and caption fit in the first screen. */}
-        <figure className="relative mx-auto w-64 lg:mx-0 lg:mt-20 lg:w-auto lg:self-start lg:justify-self-end">
+        <figure className="relative mx-auto w-64 lg:mx-0 lg:w-auto lg:justify-self-end">
           <Annot className="absolute -top-8 left-0">{"const me = () => {"}</Annot>
           <Image
             src="/img/edson.jpg"
