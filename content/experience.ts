@@ -16,8 +16,8 @@ export const experience: Role[] = [
     title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
-      en: "I **lead the frontend** of a beauty and wellness marketplace used every day in Portugal and Brazil, and own its customer and business apps on iOS, Android and the web, from architecture to store release.",
-      pt: "**Lidero o frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal e no Brasil, e sou responsável pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
+      en: "I **lead frontend engineering** for a beauty and wellness marketplace used every day across Portugal and Brazil, owning the customer and business apps on iOS, Android and web end to end, from architecture to store release.",
+      pt: "**Lidero a engenharia frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal e no Brasil, com responsabilidade total pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
     },
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [
@@ -34,12 +34,12 @@ export const experience: Role[] = [
         pt: "**Pagamentos em todo o lado**: cartões, Apple Pay, Google Pay, Pix, Stripe Connect e Tap to Pay.",
       },
       {
-        en: "**4 languages and 2 white-label brands** from one codebase.",
-        pt: "**4 idiomas e 2 marcas white-label** a partir do mesmo código.",
+        en: "**Multi-language, multi-brand platform**: every app ships in several languages and as white-label brands from a single codebase.",
+        pt: "**Plataforma multi-idioma e multi-marca**: todas as apps saem em vários idiomas e como marcas white-label a partir do mesmo código.",
       },
       {
-        en: "**Set the architecture** the team builds on; code review, mentoring and pairing.",
-        pt: "**Defino a arquitetura** em que a equipa trabalha; revisão de código, mentoria e pair programming.",
+        en: "**Own the frontend architecture and engineering standards**; code review, mentoring and pairing that level up the whole team.",
+        pt: "**Responsável pela arquitetura frontend e pelos padrões de engenharia**; revisão de código, mentoria e pair programming que fazem a equipa toda evoluir.",
       },
     ],
     products: [

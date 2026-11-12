@@ -3,7 +3,7 @@ import type { L } from "./types";
 export const profile = {
   name: "Edson Paulo Gregório",
   shortName: "Edson Gregório",
-  role: { en: "Senior Frontend Engineer & Team Lead, web & mobile", pt: "Engenheiro Frontend Sénior & Team Lead, web & mobile" } as L,
+  role: { en: "Senior Software Engineer & Tech Lead, web, mobile & AI", pt: "Engenheiro de Software Sénior & Tech Lead, web, mobile & IA" } as L,
   location: { en: "Luanda, Angola", pt: "Luanda, Angola" } as L,
   email: "edsonpaulo24@gmail.com",
   phone: "+244 942 682 194",
@@ -14,22 +14,22 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/edsonpaulo1",
   },
   intro: {
-    en: "Senior engineer and team lead who ships web and mobile products end to end: from the first commit to the App Store, with payments, four languages and AI built in. I've done it for marketplaces used every day in Europe and South America, and for my own AI products.",
-    pt: "Engenheiro sénior e team lead que lança produtos web e mobile de ponta a ponta: do primeiro commit à App Store, com pagamentos, quatro idiomas e IA de raiz. Já o fiz em marketplaces usados todos os dias na Europa e na América do Sul, e nos meus próprios produtos com IA.",
+    en: "Senior software engineer and tech lead who designs, builds and scales web and mobile products end to end: from architecture and the first commit to the App Store, with payments, multi-language support and AI built in. Marketplaces used every day across Europe and South America run on my work, and I create my own AI products on top.",
+    pt: "Engenheiro de software sénior e tech lead que desenha, constrói e escala produtos web e mobile de ponta a ponta: da arquitetura e do primeiro commit à App Store, com pagamentos, suporte multi-idioma e IA de raiz. Marketplaces usados todos os dias na Europa e na América do Sul correm sobre o meu trabalho, e ainda crio os meus próprios produtos com IA.",
   } as L,
   /** **phrase** marks what a skimming recruiter should catch; keep it to one or two per paragraph. */
   about: [
     {
-      en: "I'm a product-minded engineer who takes products **from an empty repo to the App Store and Play Store**. For six years I've shipped booking marketplaces, e-commerce, delivery apps, finance tools and AI products, always with **clean, reusable code**.",
-      pt: "Sou um engenheiro com mentalidade de produto que leva produtos **de um repositório vazio até à App Store e à Play Store**. Há seis anos que lanço marketplaces de marcações, e-commerce, apps de entregas, ferramentas financeiras e produtos com IA, sempre com **código limpo e reutilizável**.",
+      en: "I'm a product-minded, full-stack engineer who takes products **from an empty repo to the App Store, Play Store and the web**. For six years I've shipped booking marketplaces, e-commerce, delivery apps, fintech and AI products, with **scalable architecture and clean, reusable code** as the standard.",
+      pt: "Sou um engenheiro full-stack com mentalidade de produto que leva produtos **de um repositório vazio até à App Store, à Play Store e à web**. Há seis anos que lanço marketplaces de marcações, e-commerce, apps de entregas, fintech e produtos com IA, com **arquitetura escalável e código limpo e reutilizável** como padrão.",
     },
     {
-      en: "I've **led teams since 2020**: frontend and mobile teams, delivery as a project manager, and today the architecture, code review and mentoring behind a marketplace used daily in Portugal and Brazil. Along the way: **three production frontends from scratch**, 4,000+ commits and **payments on every surface**, from Apple Pay and Pix to Tap to Pay.",
-      pt: "**Lidero equipas desde 2020**: frontend e mobile, entregas como gestor de projeto e, hoje, a arquitetura, a revisão de código e a mentoria por trás de um marketplace usado diariamente em Portugal e no Brasil. Pelo caminho: **três frontends de produção criados do zero**, 4.000+ commits e **pagamentos em todas as plataformas**, de Apple Pay e Pix a Tap to Pay.",
+      en: "I've **led teams since 2020**: frontend and mobile squads, delivery as a project manager, and today the architecture, code review and mentoring behind a marketplace used daily in Portugal and Brazil. Track record: **three production frontends built from scratch**, 4,000+ commits on apps people use every day, and **end-to-end payments on every platform**, from Apple Pay and Pix to marketplace payouts and Tap to Pay.",
+      pt: "**Lidero equipas desde 2020**: squads de frontend e mobile, entregas como gestor de projeto e, hoje, a arquitetura, a revisão de código e a mentoria por trás de um marketplace usado diariamente em Portugal e no Brasil. Resultados: **três frontends de produção criados do zero**, 4.000+ commits em apps que as pessoas usam todos os dias e **pagamentos de ponta a ponta em todas as plataformas**, de Apple Pay e Pix a pagamentos a parceiros e Tap to Pay.",
     },
     {
-      en: "I also build **my own AI products**, from idea to launch. If you need someone who can own a product, lead the people building it and still care about the last pixel, **let's talk**.",
-      pt: "Também crio **os meus próprios produtos com IA**, da ideia ao lançamento. Se precisas de alguém capaz de assumir um produto, liderar quem o constrói e ainda cuidar do último pixel, **vamos falar**.",
+      en: "Beyond the day job, I **design and launch my own AI products**: LLM agents, generative media and RAG, from idea to production. If you need someone who can own a product end to end, lead the people building it and still care about the last pixel, **let's talk**.",
+      pt: "Para além do dia a dia, **desenho e lanço os meus próprios produtos com IA**: agentes LLM, media generativa e RAG, da ideia à produção. Se precisas de alguém capaz de assumir um produto de ponta a ponta, liderar quem o constrói e ainda cuidar do último pixel, **vamos falar**.",
     },
   ] as L[],
   stats: [
@@ -37,7 +37,7 @@ export const profile = {
     { value: "5+", label: { en: "years leading frontend and mobile teams", pt: "anos a liderar equipas de frontend e mobile" } },
     { value: "9k+", label: { en: "contributions on GitHub", pt: "contribuições no GitHub" } },
     { value: "10+", label: { en: "products launched, from idea to release", pt: "produtos lançados, da ideia ao release" } },
-    { value: "4", label: { en: "languages in every product: pt-PT, pt-BR, en, es", pt: "idiomas em cada produto: pt-PT, pt-BR, en, es" } },
+    { value: "3", label: { en: "platforms in production: iOS, Android and web", pt: "plataformas em produção: iOS, Android e web" } },
   ] as { value: string; label: L }[],
   education: {
     school: { en: "Catholic University of Angola", pt: "Universidade Católica de Angola" } as L,

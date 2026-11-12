@@ -2,9 +2,9 @@ import type { Locale } from "./types";
 
 const en = {
   meta: {
-    title: "Edson Gregório — Senior Frontend Engineer & Team Lead",
+    title: "Edson Gregório — Senior Software Engineer & Tech Lead",
     description:
-      "Edson Paulo Gregório is a senior frontend engineer and team lead. 6+ years shipping React, React Native and Next.js products, payments and AI, for teams around the world.",
+      "Edson Paulo Gregório is a senior software engineer and tech lead. 6+ years designing, building and scaling web and mobile products with React, React Native, Next.js, payments and AI, for teams around the world.",
   },
   nav: { about: "About", work: "Experience", projects: "Projects", skills: "Skills", contact: "Contact", switchTo: "Ver em português", menu: "Open menu", close: "Close menu" },
   hero: {
@@ -45,9 +45,9 @@ export type Dict = typeof en;
 
 const pt: Dict = {
   meta: {
-    title: "Edson Gregório — Senior Frontend Engineer & Team Lead",
+    title: "Edson Gregório — Senior Software Engineer & Tech Lead",
     description:
-      "Edson Paulo Gregório é engenheiro frontend sénior e team lead. Mais de 6 anos a lançar produtos React, React Native e Next.js, pagamentos e IA, para equipas de todo o mundo.",
+      "Edson Paulo Gregório é engenheiro de software sénior e tech lead. Mais de 6 anos a desenhar, construir e escalar produtos web e mobile com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
   },
   nav: { about: "Sobre", work: "Experiência", projects: "Projetos", skills: "Competências", contact: "Contacto", switchTo: "View in English", menu: "Abrir menu", close: "Fechar menu" },
   hero: {

@@ -44,17 +44,18 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
           </div>
         </div>
 
-        <figure className="relative mx-auto w-64 lg:mx-0 lg:w-full">
+        {/* On desktop the photo sits at the top and is sized by viewport height, so photo and caption fit in the first screen. */}
+        <figure className="relative mx-auto w-64 lg:mx-0 lg:mt-26 lg:w-auto lg:self-start lg:justify-self-end">
           <Annot className="absolute -top-8 left-0">{"const me = () => {"}</Annot>
           <Image
             src="/img/edson.jpg"
             alt={profile.name}
-            width={800}
-            height={1000}
+            width={816}
+            height={1142}
             priority
-            className="aspect-[4/5] w-full rounded-[2rem] object-cover"
+            className="h-auto w-full rounded-[2rem] lg:h-[min(28rem,calc(100svh-13rem))] lg:w-auto"
           />
-          <figcaption className="mt-3 text-sm text-muted">{t.hero.available}</figcaption>
+          <figcaption className="mt-3 text-sm text-muted lg:w-0 lg:min-w-full">{t.hero.available}</figcaption>
           <Annot className="absolute -bottom-9 right-0">{"}"}</Annot>
         </figure>
       </div>
