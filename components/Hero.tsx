@@ -1,0 +1,63 @@
+import Image from "next/image";
+import type { Dict } from "@/content/i18n";
+import { profile } from "@/content/profile";
+import type { Locale } from "@/content/types";
+import { Annot } from "./Annot";
+import { Socials } from "./Socials";
+
+export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
+  return (
+    <section id="top" className="relative overflow-hidden">
+      <div className="mx-auto grid max-w-6xl items-end gap-12 px-4 pb-20 pt-14 sm:px-8 md:pt-20 lg:grid-cols-[1fr_20rem]">
+        <div>
+          <Annot className="write-in block">{"<h1>"}</Annot>
+          <h1 className="mt-3">
+            <span className="settle block text-xl text-muted sm:text-2xl" style={{ animationDelay: "0.2s" }}>
+              {t.hero.hello}
+            </span>
+            <span
+              className="settle mt-1 block text-[clamp(3.4rem,13vw,9.5rem)] font-extrabold leading-[0.86] tracking-[-0.04em] [font-stretch:75%]"
+              style={{ animationDelay: "0.35s" }}
+            >
+              Edson
+              <br />
+              Gregório
+            </span>
+          </h1>
+          <Annot className="write-in mt-3 block" style={{ animationDelay: "0.9s" }}>
+            {"</h1>"}
+          </Annot>
+
+          <p className="mt-8 max-w-xl text-2xl font-medium leading-snug [font-stretch:90%] sm:text-3xl">
+            <span className="text-crimson">{profile.role[locale]}</span>
+          </p>
+          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{profile.intro[locale]}</p>
+
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#projects" className="rounded-full bg-crimson px-6 py-3 font-semibold text-ink transition-transform hover:-translate-y-0.5">
+              {t.hero.ctaProjects}
+            </a>
+            <a href="#contact" className="rounded-full border border-line px-6 py-3 font-semibold transition-colors hover:border-paper">
+              {t.hero.ctaContact}
+            </a>
+            <Socials className="sm:ml-2" />
+          </div>
+        </div>
+
+        <figure className="relative mx-auto w-64 lg:mx-0 lg:w-full">
+          <Annot className="absolute -top-8 left-0">{"const me = () => {"}</Annot>
+          <Image
+            src="/img/edson.jpg"
+            alt={profile.name}
+            width={800}
+            height={1000}
+            priority
+            className="aspect-[4/5] w-full rounded-[2rem] object-cover"
+          />
+          <figcaption className="mt-3 text-sm text-muted">{t.hero.available}</figcaption>
+          <Annot className="absolute -bottom-9 right-0">{"}"}</Annot>
+        </figure>
+      </div>
+    </section>
+  );
+}

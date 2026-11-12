@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# edsonpaulo.github.io
 
-## Getting Started
+Personal portfolio of Edson Paulo Gregório: frontend team lead and web & mobile developer. It's in English and Portuguese.
 
-First, run the development server:
+- GitHub Pages: https://edsonpaulo.github.io
+- Vercel: https://edsonpaulo.vercel.app
+
+It's built with Next.js 16 (App Router, static export) and Tailwind CSS 4. It needs Node 24 (see `.nvmrc`).
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install
+npm run dev        # http://localhost:3000/en/
+npm run build      # static site in out/
+npm start          # serve out/ locally
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Edit the content
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+All text lives in `content/`. The components only render it.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+| File | What it holds |
+|---|---|
+| `content/profile.ts` | name, intro, about, stats, contacts, education |
+| `content/experience.ts` | work history and the sheerME products |
+| `content/projects.ts` | every project. Set `visible: false` to hide one, `featured: true` to show it as a large card, and add a screenshot at `public/projects/<slug>.jpg` |
+| `content/skills.ts` | skill groups |
+| `content/i18n.ts` | interface strings in EN and PT |
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Every text field has an `en` and a `pt` version.
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+- **GitHub Pages:** `.github/workflows/deploy.yml` builds and publishes `out/` on every push to `main`. In the repo settings, set Pages → Source to "GitHub Actions".
+- **Vercel:** import the repo. It detects Next.js and serves the static export as is.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`/` sends visitors to `/pt/` or `/en/` based on their browser language. The page for that redirect is `public/index.html`.
