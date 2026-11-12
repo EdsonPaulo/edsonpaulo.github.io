@@ -38,6 +38,8 @@ export function Nav({ t, locale }: { t: Dict; locale: Locale }) {
               <Link
                 key={l}
                 href={`/${l}/`}
+                // Keep the reader where they are; without this the router jumps to the bottom of the new page.
+                scroll={false}
                 hrefLang={l}
                 lang={l}
                 title={t.nav.switchTo}
