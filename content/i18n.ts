@@ -10,8 +10,6 @@ const en = {
   hero: {
     hello: "Hi, I'm",
     available: "Working remotely with companies and teams around the world.",
-    ctaProjects: "See my projects",
-    ctaContact: "Get in touch",
   },
   about: { title: "About" },
   work: { title: "Experience", builtHere: "What I build there" },
@@ -49,12 +47,10 @@ const pt: Dict = {
     description:
       "Edson Paulo Gregório é engenheiro de software sénior e tech lead. Mais de 6 anos a desenhar, construir e escalar produtos web e mobile com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
   },
-  nav: { about: "Sobre", work: "Experiência", projects: "Projetos", skills: "Competências", contact: "Contacto", switchTo: "View in English", menu: "Abrir menu", close: "Fechar menu" },
+  nav: { about: "Sobre", work: "Experiência", projects: "Projetos", skills: "Competências", contact: "Contato", switchTo: "View in English", menu: "Abrir menu", close: "Fechar menu" },
   hero: {
     hello: "Olá, sou o",
     available: "A trabalhar remotamente com empresas e equipas de todo o mundo.",
-    ctaProjects: "Ver projetos",
-    ctaContact: "Falar comigo",
   },
   about: { title: "Sobre" },
   work: { title: "Experiência", builtHere: "O que construo lá" },
@@ -71,7 +67,7 @@ const pt: Dict = {
   },
   skills: { title: "Competências", education: "Formação", languages: "Idiomas" },
   contact: {
-    title: "Contacto",
+    title: "Contato",
     intro: "Estás a contratar para uma função sénior ou de liderança, ou tens um produto para construir? Vamos falar. O formulário abre a tua app de email com a mensagem pronta a enviar, e normalmente respondo em menos de 24 horas.",
     name: "O teu nome",
     subject: "Assunto",

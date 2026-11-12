@@ -33,15 +33,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
           </p>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{profile.intro[locale]}</p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="#projects" className="rounded-full bg-crimson px-6 py-3 font-semibold text-ink transition-transform hover:-translate-y-0.5">
-              {t.hero.ctaProjects}
-            </a>
-            <a href="#contact" className="rounded-full border border-line px-6 py-3 font-semibold transition-colors hover:border-paper">
-              {t.hero.ctaContact}
-            </a>
-            <Socials className="sm:ml-2" />
-          </div>
+          <Socials className="-ml-3 mt-8" />
         </div>
 
         {/* On desktop the photo sits at the top and is sized by viewport height, so photo and caption fit in the first screen. */}
