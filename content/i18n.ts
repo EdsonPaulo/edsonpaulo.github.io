@@ -4,7 +4,7 @@ const en = {
   meta: {
     title: "Edson Gregório — Senior Software Engineer & Tech Lead",
     description:
-      "Edson Paulo Gregório is a senior software engineer and tech lead. 6+ years designing, building and scaling web and mobile products with React, React Native, Next.js, payments and AI, for teams around the world.",
+      "Edson Paulo Gregório is a senior software engineer and tech lead. 6+ years planning, architecting and shipping web and mobile products, from zero to production, with React, React Native, Next.js, payments and AI, for teams around the world.",
   },
   nav: { about: "About", work: "Experience", projects: "Projects", skills: "Skills", contact: "Contact", switchTo: "Ver em português", menu: "Open menu", close: "Close menu" },
   hero: {
@@ -15,7 +15,7 @@ const en = {
   work: { title: "Experience", builtHere: "What I build there" },
   projects: {
     title: "Projects",
-    intro: "Products I've designed, built and launched on my own, plus client and freelance work. Most code is private, so links go straight to the live product.",
+    intro: "Products I've planned, built and launched on my own, plus client and freelance work. Most code is private, so links go straight to the live product.",
     filters: { all: "All", web: "Web", mobile: "Mobile", ai: "AI", backend: "Backend" },
     live: "Open live site",
     code: "View code",
@@ -45,7 +45,7 @@ const pt: Dict = {
   meta: {
     title: "Edson Gregório — Engenheiro de Software Sénior & Tech Lead",
     description:
-      "Edson Paulo Gregório é engenheiro de software sénior e tech lead. Mais de 6 anos a desenhar, construir e escalar produtos web e mobile com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
+      "Edson Paulo Gregório é engenheiro de software sénior e tech lead. Mais de 6 anos a planear, arquitetar e lançar produtos web e mobile, do zero à produção, com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
   },
   nav: { about: "Sobre", work: "Experiência", projects: "Projetos", skills: "Competências", contact: "Contato", switchTo: "View in English", menu: "Abrir menu", close: "Fechar menu" },
   hero: {
@@ -56,7 +56,7 @@ const pt: Dict = {
   work: { title: "Experiência", builtHere: "O que construo lá" },
   projects: {
     title: "Projetos",
-    intro: "Produtos que desenhei, construí e lancei por conta própria, mais trabalho para clientes e freelance. A maior parte do código é privado, por isso os links levam diretamente ao produto ao vivo.",
+    intro: "Produtos que planeei, construí e lancei por conta própria, mais trabalho para clientes e freelance. A maior parte do código é privado, por isso os links levam diretamente ao produto ao vivo.",
     filters: { all: "Todos", web: "Web", mobile: "Mobile", ai: "IA", backend: "Backend" },
     live: "Abrir site",
     code: "Ver código",

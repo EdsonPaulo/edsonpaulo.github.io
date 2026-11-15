@@ -17,7 +17,7 @@ export const skills: { group: L; items: string[] }[] = [
   { group: { en: "AI", pt: "IA" }, items: ["OpenAI", "Anthropic Claude", "Embeddings & RAG", "AI agents", "Vercel AI SDK", "Spring AI", "Whisper", "Text-to-speech", "Replicate"] },
   { group: { en: "Payments", pt: "Pagamentos" }, items: ["Stripe", "Stripe Connect", "Apple Pay", "Google Pay", "Stripe Terminal (Tap to Pay)", "Pix", "RevenueCat"] },
   { group: { en: "Integrations", pt: "Integrações" }, items: ["WhatsApp Cloud API", "Twilio", "Firebase Cloud Messaging", "Google Maps", "Mapbox", "Resend", "Web Push", "Leaflet", "Amadeus", "Chart.js", "Recharts", "ApexCharts"] },
-  { group: { en: "Quality & monitoring", pt: "Qualidade & monitorização" }, items: ["Jest", "Cypress", "Playwright", "Unit, integration & e2e testing", "Selenium", "Sentry", "Google Analytics", "Amplitude", "Segment", "PostHog"] },
+  { group: { en: "Quality & monitoring", pt: "Qualidade & monitorização" }, items: ["Jest", "Cypress", "Playwright", "Unit, integration & e2e testing", "Performance & security testing", "Selenium", "Sentry", "Google Analytics", "Amplitude", "Segment", "PostHog"] },
   { group: { en: "DevOps & cloud", pt: "DevOps & cloud" }, items: ["Docker", "AWS (EC2, S3)", "GitHub Actions", "Git", "Linux", "Vercel", "Turborepo", "Monorepos", "npm / yarn / pnpm"] },
-  { group: { en: "Leadership & process", pt: "Liderança & processo" }, items: ["Technical leadership", "Scrum", "Figma", "Code review", "Mentoring", "Kanban", "UI design", "Clean, reusable code", "Adobe XD", "Photoshop"] },
+  { group: { en: "Architecture & leadership", pt: "Arquitetura & liderança" }, items: ["Software architecture", "Technical leadership", "Requirements engineering", "UML & data modelling", "Code review", "Mentoring", "Scrum", "Kanban", "Clean, reusable code", "Figma"] },
 ];

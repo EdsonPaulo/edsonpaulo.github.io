@@ -142,6 +142,7 @@ export default async function CV({ params }: { params: Promise<{ locale: string 
           <Heading className="mt-4">{t.skills.education}</Heading>
           <p className="font-bold">{profile.education.school[locale]}</p>
           <p className="text-[#16131a]/80">{profile.education.degree[locale]}</p>
+          <p className={`mt-1 text-[7.5pt] leading-snug ${muted}`}>{profile.education.project[locale]}</p>
 
           <Heading className="mt-4">{t.skills.languages}</Heading>
           <ul className="text-[#16131a]/80">

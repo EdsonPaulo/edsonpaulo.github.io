@@ -85,6 +85,7 @@ export function Skills({ t, locale }: { t: Dict; locale: Locale }) {
           <h3 className="text-sm font-semibold text-muted">{t.skills.education}</h3>
           <p className="mt-2 text-xl font-semibold">{profile.education.school[locale]}</p>
           <p className="text-paper/85">{profile.education.degree[locale]}</p>
+          <p className="mt-2 max-w-prose text-sm leading-relaxed text-muted">{profile.education.project[locale]}</p>
         </div>
         <div>
           <h3 className="text-sm font-semibold text-muted">{t.skills.languages}</h3>
