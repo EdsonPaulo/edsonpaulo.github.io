@@ -23,16 +23,16 @@ export const profile = {
   /** **phrase** marks what a skimming recruiter should catch; keep it to one or two per paragraph. */
   about: [
     {
-      en: "I'm a product-minded, full-stack engineer who takes products **from requirements to production** on the App Store, Play Store and the web: architecture and data modelling, implementation, automated testing and monitoring. For six years I've shipped booking marketplaces, e-commerce, delivery apps, fintech and AI products, with **scalable architecture and clean, reusable code** as the standard.",
-      pt: "Sou um engenheiro full-stack com mentalidade de produto que leva produtos **dos requisitos à produção** na App Store, na Play Store e na web: arquitetura e modelação de dados, implementação, testes automatizados e monitorização. Há seis anos que lanço marketplaces de marcações, e-commerce, apps de entregas, fintech e produtos com IA, com **arquitetura escalável e código limpo e reutilizável** como padrão.",
+      en: "I’m a **full-stack engineer** with experience across e-commerce, delivery, fintech, and booking platforms. I work on customer-facing apps and the tools businesses use to run their operations. My work spans architecture, data modelling, implementation, automated testing, and monitoring.",
+      pt: "Sou **engenheiro full-stack** e já trabalhei em plataformas de comércio eletrónico, entregas, serviços financeiros e marcações. Desenvolvo aplicações para clientes e ferramentas que as empresas usam no dia a dia. O meu trabalho inclui arquitetura, modelação de dados, implementação, testes automatizados e monitorização.",
     },
     {
-      en: "I've **led teams since 2020**: frontend and mobile squads, delivery as a project manager, and today the architecture, code review and mentoring behind a marketplace used daily in Portugal and Brazil. Track record: **three production frontends built from scratch**, 4,000+ commits on apps people use every day, and **end-to-end payments on every platform**, from Apple Pay and Pix to marketplace payouts and Tap to Pay.",
-      pt: "**Lidero equipas desde 2020**: squads de frontend e mobile, entregas como gestor de projeto e, hoje, a arquitetura, a revisão de código e a mentoria por trás de um marketplace usado diariamente em Portugal, Espanha e no Brasil. Resultados: **três frontends de produção criados do zero**, 4.000+ commits em apps que as pessoas usam todos os dias e **pagamentos de ponta a ponta em todas as plataformas**, de Apple Pay e Pix a pagamentos a parceiros e Tap to Pay.",
+      en: "I guide **technical decisions** for products used daily in Portugal, Spain, and Brazil. I’ve helped bring new applications into production. I set engineering standards, review code, mentor developers, and work directly on implementation.",
+      pt: "Oriento **decisões técnicas** em produtos usados diariamente em Portugal, Espanha e Brasil. Ajudei a colocar novas aplicações em produção. Defino padrões de engenharia, faço revisão de código, acompanho outros programadores e participo diretamente na implementação.",
     },
     {
-      en: "Beyond the day job, I **plan, build and launch my own AI products**: LLM agents, generative media and RAG, from idea to production. If you need someone who can own a product end to end, lead the people building it and still care about the last pixel, **let's talk**.",
-      pt: "Para além do dia a dia, **planeio, construo e lanço os meus próprios produtos com IA**: agentes LLM, media generativa e RAG, da ideia à produção. Se precisas de alguém capaz de assumir um produto de ponta a ponta, liderar quem o constrói e ainda cuidar do último pixel, **vamos falar**.",
+      en: "I build **complex integrations for web and mobile products**, from payments that span checkout, partner payouts, and in-person transactions to AI assistants, generative media, and marketing automation. I’ve also built custom map experiences and managed production releases on the **App Store and Google Play**.",
+      pt: "Desenvolvo **integrações complexas para produtos web e mobile**, desde fluxos de pagamento que ligam o checkout, as transferências para parceiros e os pagamentos presenciais até assistentes com IA, geração de conteúdos e automação de marketing. Também desenvolvo mapas personalizados e conduzo a publicação de aplicações na **App Store e no Google Play**.",
     },
   ] as L[],
   stats: [
@@ -58,7 +58,7 @@ export const profile = {
       value: "10+",
       label: {
         en: "products launched, from idea to release",
-        pt: "produtos lançados, da ideia ao release",
+        pt: "produtos lançados, da ideia ao lançamento",
       },
     },
     {

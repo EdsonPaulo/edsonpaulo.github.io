@@ -16,7 +16,7 @@ export const experience: Role[] = [
   {
     company: "sheerME",
     url: "https://sheerme.com",
-    title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
+    title: { en: "Frontend Tech Lead & Senior Developer", pt: "Frontend Tech Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
       en: "I **lead frontend engineering** for a beauty and wellness platform used daily in Portugal, Spain and Brazil. Customers discover and book services, while businesses manage schedules, clients and payments. I’m responsible for the web, iOS and Android applications, from architecture to release.",
@@ -25,16 +25,16 @@ export const experience: Role[] = [
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [
       {
-        en: "**#1 contributor of all time** on both mobile apps (2,700+ commits), upgraded through to Expo SDK 57 and React 19 without slowing releases.",
-        pt: "**Maior contribuidor de sempre** nas duas apps mobile (2.700+ commits); atualizei-as até ao Expo SDK 57 e React 19 sem travar os releases.",
+        en: "**Top contributor to both mobile apps**, with 2,700+ commits across the two. I upgraded them to Expo SDK 57 and React 19 while maintaining the release schedule.",
+        pt: "**Principal contribuidor nas duas aplicações mobile**, com mais de 2.700 commits no total. Atualizei ambas para o Expo SDK 57 e React 19 mantendo o ritmo de publicação.",
       },
       {
-        en: "**Three production frontends from scratch**: the business app (2022), the PRO back office (2023) and the marketplace website (2025).",
-        pt: "**Três frontends de produção criados do zero**: a app de negócios (2022), o back office PRO (2023) e o site do marketplace (2025).",
+        en: "**Three production frontend launches**: the business app (2022), the PRO back office (2023) and the marketplace website (2025).",
+        pt: "**Três frontends lançados em produção**: a app de negócios (2022), o back office PRO (2023) e o site do marketplace (2025).",
       },
       {
         en: "**Payments for customers and businesses**: cards, Apple Pay, Google Pay and Pix at checkout, Stripe Connect payouts for businesses, and Tap to Pay for in-person transactions.",
-        pt: "**Pagamentos para clientes e negócios** com cartões, Apple Pay, Google Pay e Pix no checkout, repasses via Stripe Connect e pagamentos presenciais com Tap to Pay.",
+        pt: "**Pagamentos para clientes e negócios** com cartões, Apple Pay, Google Pay e Pix no checkout, transferências para parceiros via Stripe Connect e pagamentos presenciais com Tap to Pay.",
       },
       {
         en: "**One codebase for multiple languages and brands**: the team can release localized and white-label editions of each app from the same codebase.",
@@ -100,7 +100,7 @@ export const experience: Role[] = [
     period: { en: "Sep 2020 – May 2021", pt: "Set 2020 – Mai 2021" },
     summary: {
       en: "I **led a team of 5+ developers** building React Native apps for e-commerce projects. I also shipped the web storefronts where customers shopped and landing pages in React.",
-      pt: "**Liderei uma equipa de 5+ desenvolvedores** na construção de apps em React Native para projetos de e-commerce. Também lancei as lojas online e as landing pages em React.",
+      pt: "**Liderei uma equipa de cinco ou mais programadores** na construção de apps em React Native para projetos de e-commerce. Também lancei as lojas online e as landing pages em React.",
     },
     stack: "React Native, React, TypeScript, Redux, Jest",
   },

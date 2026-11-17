@@ -4,7 +4,7 @@ const en = {
   meta: {
     title: "Edson Gregorio — Senior Software Engineer & Tech Lead",
     description:
-      "Edson Paulo Gregorio is a senior software engineer and tech lead. 6+ years planning, architecting and shipping web and mobile products, from zero to production, with React, React Native, Next.js, payments and AI, for teams around the world.",
+      "Edson Paulo Gregorio is a senior software engineer and tech lead. He builds web and mobile products, guides technical decisions, and integrates AI into products.",
   },
   nav: {
     about: "About",
@@ -25,7 +25,7 @@ const en = {
   projects: {
     title: "Projects",
     intro:
-      "Products I've planned, built and launched on my own, plus client and freelance work. Most code is private, so links go straight to the live product.",
+      "A selection of products, client work, and prototypes. Open the live sites or public repositories where available.",
     filters: {
       all: "All",
       web: "Web",
@@ -72,7 +72,7 @@ const pt: Dict = {
   meta: {
     title: "Edson Gregorio — Engenheiro de Software Sénior & Tech Lead",
     description:
-      "Edson Paulo Gregorio é engenheiro de software sénior e tech lead. Mais de 6 anos a planear, arquitetar e lançar produtos web e mobile, do zero à produção, com React, React Native, Next.js, pagamentos e IA, para equipas de todo o mundo.",
+      "Edson Paulo Gregorio é engenheiro de software sénior e tech lead. Desenvolve produtos web e mobile, orienta decisões técnicas e integra IA em produtos.",
   },
   nav: {
     about: "Sobre",
@@ -94,7 +94,7 @@ const pt: Dict = {
   projects: {
     title: "Projetos",
     intro:
-      "Produtos que planeei, construí e lancei por conta própria, mais trabalho para clientes e freelance. A maior parte do código é privado, por isso os links levam diretamente ao produto ao vivo.",
+      "Uma seleção de produtos, trabalhos para clientes e protótipos, com links para os sites ou repositórios públicos quando disponíveis.",
     filters: {
       all: "Todos",
       web: "Web",

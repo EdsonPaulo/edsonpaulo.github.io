@@ -1,6 +1,6 @@
 # edsonpaulo.github.io
 
-Personal portfolio of Edson Paulo Gregorio: frontend team lead and web & mobile developer. It's in English and Portuguese.
+Personal portfolio of Edson Paulo Gregorio: Senior Software Engineer & Tech Lead. It's in English and Portuguese.
 
 - GitHub Pages: https://edsonpaulo.github.io
 - Vercel: https://edsonpaulo.vercel.app
