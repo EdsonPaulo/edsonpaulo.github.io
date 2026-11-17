@@ -19,8 +19,8 @@ export const experience: Role[] = [
     title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
-      en: "I **lead frontend engineering** for a beauty and wellness marketplace used every day across Portugal and Brazil, owning the customer and business apps on iOS, Android and web end to end, from architecture to store release.",
-      pt: "**Lidero a engenharia frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal e no Brasil, com responsabilidade total pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
+      en: "I **lead frontend engineering** for a beauty and wellness marketplace used every day across Portugal, Spain and Brazil, owning the customer and business apps on iOS, Android and web end to end, from architecture to store release.",
+      pt: "**Lidero a engenharia frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal, na Espanha e no Brasil, com responsabilidade total pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
     },
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [

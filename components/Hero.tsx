@@ -21,7 +21,7 @@ export function Hero({ t, locale }: { t: Dict; locale: Locale }) {
             >
               Edson
               <br />
-              Gregório
+              Gregorio
             </span>
           </h1>
           <Annot className="write-in mt-3 block" style={{ animationDelay: "0.9s" }}>

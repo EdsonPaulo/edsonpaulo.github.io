@@ -1,7 +1,10 @@
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import { Bricolage_Grotesque, Caveat } from "next/font/google";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import Analytics from "@/components/Analytics";
+import WhatsApp from "@/components/WhatsApp";
 import { dict } from "@/content/i18n";
 import { profile } from "@/content/profile";
 import { coreStack } from "@/content/skills";
@@ -64,6 +67,9 @@ export default async function LocaleLayout({ children, params }: { children: Rea
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
         {children}
+        <WhatsApp locale={locale} />
+        <Analytics />
+        {process.env.VERCEL === "1" && <VercelAnalytics />}
       </body>
     </html>
   );

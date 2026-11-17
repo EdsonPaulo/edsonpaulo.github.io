@@ -1,6 +1,6 @@
 # edsonpaulo.github.io
 
-Personal portfolio of Edson Paulo Gregório: frontend team lead and web & mobile developer. It's in English and Portuguese.
+Personal portfolio of Edson Paulo Gregorio: frontend team lead and web & mobile developer. It's in English and Portuguese.
 
 - GitHub Pages: https://edsonpaulo.github.io
 - Vercel: https://edsonpaulo.vercel.app
@@ -20,13 +20,13 @@ npm start          # serve out/ locally
 
 All text lives in `content/`. The components only render it.
 
-| File | What it holds |
-|---|---|
-| `content/profile.ts` | name, intro, about, stats, contacts, education |
-| `content/experience.ts` | work history and the sheerME products |
-| `content/projects.ts` | every project. Set `visible: false` to hide one, `featured: true` to show it as a large card, and add a screenshot at `public/projects/<slug>.jpg` |
-| `content/skills.ts` | skill groups |
-| `content/i18n.ts` | interface strings in EN and PT |
+| File                    | What it holds                                                                                                                                      |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `content/profile.ts`    | name, intro, about, stats, contacts, education                                                                                                     |
+| `content/experience.ts` | work history and the sheerME products                                                                                                              |
+| `content/projects.ts`   | every project. Set `visible: false` to hide one, `featured: true` to show it as a large card, and add a screenshot at `public/projects/<slug>.jpg` |
+| `content/skills.ts`     | skill groups                                                                                                                                       |
+| `content/i18n.ts`       | interface strings in EN and PT                                                                                                                     |
 
 Every text field has an `en` and a `pt` version.
 
@@ -46,3 +46,13 @@ This writes `public/cv/edson-gregorio-cv-{en,pt}.pdf`. `public/cv/edson-gregorio
 - **Vercel:** import the repo. It detects Next.js and serves the static export as is.
 
 `/` sends visitors to `/pt/` or `/en/` based on their browser language. The page for that redirect is `public/index.html`.
+
+## Google Analytics
+
+Crie um fluxo Web no Google Analytics 4 e copie o ID de medição (`G-…`).
+No GitHub, adicione o ID em **Settings → Secrets and variables → Actions → Variables**
+com o nome `NEXT_PUBLIC_GA_MEASUREMENT_ID`. Execute novamente o workflow **Deploy to GitHub Pages**
+para incluir o ID na próxima compilação. Em ambiente local, use a mesma variável em `.env.local`.
+
+O GA4 apresenta a localização aproximada no relatório de detalhes demográficos, na dimensão **País**.
+O botão flutuante de WhatsApp gera o evento `whatsapp_click`.
