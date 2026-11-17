@@ -17,8 +17,8 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/edsonpaulo1",
   },
   intro: {
-    en: "I plan, architect and build web and mobile products from zero to production: requirements, architecture, code, testing and release, with payments, multi-language and AI built in. Marketplaces used daily across Europe and South America run on my work, and I ship my own AI products too.",
-    pt: "Planeio, defino a arquitetura e construo produtos web e mobile do zero à produção: requisitos, arquitetura, código, testes e lançamento, com pagamentos, multi-idioma e IA de raiz. Marketplaces usados diariamente na Europa e na América do Sul correm sobre o meu trabalho, e também lanço os meus próprios produtos com IA.",
+    en: "I build web and mobile products from concept to production. I lead technical decisions, design the architecture, and write code. My work also includes integrating AI into products.",
+    pt: "Desenvolvo produtos web e mobile, da ideia à produção. Assumo a liderança técnica de projetos, defino a arquitetura e participo diretamente na implementação. Também trabalho na integração de IA em produtos.",
   } as L,
   /** **phrase** marks what a skimming recruiter should catch; keep it to one or two per paragraph. */
   about: [

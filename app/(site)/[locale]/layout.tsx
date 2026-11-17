@@ -39,7 +39,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       images: [{ url: "/img/edson.jpg", width: 816, height: 994, alt: profile.name }],
     },
     twitter: { card: "summary", title: t.meta.title, description: t.meta.description, images: ["/img/edson.jpg"] },
-    icons: { icon: "/favicon.ico" },
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+        { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+      ],
+      apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+    },
   };
 }
 

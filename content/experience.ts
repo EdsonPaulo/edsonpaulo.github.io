@@ -19,8 +19,8 @@ export const experience: Role[] = [
     title: { en: "Frontend Team Lead & Senior Developer", pt: "Frontend Team Lead & Developer Sénior" },
     period: { en: "Dec 2021 – now", pt: "Dez 2021 – hoje" },
     summary: {
-      en: "I **lead frontend engineering** for a beauty and wellness marketplace used every day across Portugal, Spain and Brazil, owning the customer and business apps on iOS, Android and web end to end, from architecture to store release.",
-      pt: "**Lidero a engenharia frontend** de um marketplace de beleza e bem-estar usado todos os dias em Portugal, na Espanha e no Brasil, com responsabilidade total pelas apps de clientes e de negócios em iOS, Android e web, da arquitetura à publicação nas lojas.",
+      en: "I **lead frontend engineering** for a beauty and wellness platform used daily in Portugal, Spain and Brazil. Customers discover and book services, while businesses manage schedules, clients and payments. I’m responsible for the web, iOS and Android applications, from architecture to release.",
+      pt: "**Lidero a engenharia frontend** de uma plataforma de beleza e bem-estar usada diariamente em Portugal, Espanha e Brasil. Os clientes descobrem e marcam serviços e os negócios gerem agendas, clientes e pagamentos. Sou responsável pelas aplicações web, iOS e Android, da arquitetura ao lançamento.",
     },
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [
@@ -33,12 +33,12 @@ export const experience: Role[] = [
         pt: "**Três frontends de produção criados do zero**: a app de negócios (2022), o back office PRO (2023) e o site do marketplace (2025).",
       },
       {
-        en: "**Payments everywhere**: cards, Apple Pay, Google Pay, Pix, Stripe Connect payouts and Tap to Pay.",
-        pt: "**Pagamentos em todo o lado**: cartões, Apple Pay, Google Pay, Pix, Stripe Connect e Tap to Pay.",
+        en: "**Payments for customers and businesses**: cards, Apple Pay, Google Pay and Pix at checkout, Stripe Connect payouts for businesses, and Tap to Pay for in-person transactions.",
+        pt: "**Pagamentos para clientes e negócios** com cartões, Apple Pay, Google Pay e Pix no checkout, repasses via Stripe Connect e pagamentos presenciais com Tap to Pay.",
       },
       {
-        en: "**Multi-language, multi-brand platform**: every app ships in several languages and as white-label brands from a single codebase.",
-        pt: "**Plataforma multi-idioma e multi-marca**: todas as apps saem em vários idiomas e como marcas white-label a partir do mesmo código.",
+        en: "**One codebase for multiple languages and brands**: the team can release localized and white-label editions of each app from the same codebase.",
+        pt: "**Uma base de código para vários idiomas e marcas** permite à equipa publicar versões localizadas e white-label de cada aplicação.",
       },
       {
         en: "**Own the frontend architecture and engineering standards**; code review, mentoring and pairing that level up the whole team.",
@@ -99,8 +99,8 @@ export const experience: Role[] = [
     title: { en: "Mobile Lead & Frontend Developer", pt: "Mobile Lead & Frontend Developer" },
     period: { en: "Sep 2020 – May 2021", pt: "Set 2020 – Mai 2021" },
     summary: {
-      en: "Built e-commerce platforms and digital stores. **Led mobile development** in React Native with a team of 4+ developers, and shipped web storefronts and landing pages in React.",
-      pt: "Construí plataformas de e-commerce e lojas digitais. **Liderei o desenvolvimento mobile** em React Native com uma equipa de 4+ programadores e lancei lojas web e landing pages em React.",
+      en: "I **led a team of 5+ developers** building React Native apps for e-commerce projects. I also shipped the web storefronts where customers shopped and landing pages in React.",
+      pt: "**Liderei uma equipa de 5+ desenvolvedores** na construção de apps em React Native para projetos de e-commerce. Também lancei as lojas online e as landing pages em React.",
     },
     stack: "React Native, React, TypeScript, Redux, Jest",
   },
