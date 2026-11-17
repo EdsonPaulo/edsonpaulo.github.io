@@ -20,17 +20,18 @@ export function Experience({ t, locale }: { t: Dict; locale: Locale }) {
               {role.company}
               <span className="font-normal text-muted"> / {role.title[locale]}</span>
             </h3>
-            {role.url && (
+            {role.urls?.map((url) => (
               <a
-                href={role.url}
+                key={url}
+                href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-1 inline-flex items-center gap-1 text-sm text-annot transition-colors hover:text-crimson"
+                className="mr-4 mt-1 inline-flex items-center gap-1 text-sm text-annot transition-colors hover:text-crimson"
               >
-                {role.url.replace(/^https?:\/\//, "")}
+                {url.replace(/^https?:\/\//, "")}
                 <FiArrowUpRight aria-hidden />
               </a>
-            )}
+            ))}
             <p className="mt-3 max-w-2xl leading-relaxed text-paper/75">
               <Rich text={role.summary[locale]} />
             </p>

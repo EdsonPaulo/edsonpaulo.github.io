@@ -99,10 +99,14 @@ export default async function CV({ params }: { params: Promise<{ locale: string 
                 </div>
                 <p className="flex items-baseline justify-between gap-3">
                   <span className="font-semibold text-[#16131a]/80">{role.title[locale]}</span>
-                  {role.url && (
-                    <a href={role.url} className={`shrink-0 text-[8pt] ${muted}`}>
-                      {strip(role.url)}
-                    </a>
+                  {role.urls && (
+                    <span className="inline-flex flex-wrap justify-end gap-x-2">
+                      {role.urls.map((url) => (
+                        <a key={url} href={url} className={`text-[8pt] ${muted}`}>
+                          {strip(url)}
+                        </a>
+                      ))}
+                    </span>
                   )}
                 </p>
                 <p className="mt-1">
