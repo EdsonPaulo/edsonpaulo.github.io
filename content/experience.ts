@@ -103,7 +103,7 @@ export const experience: Role[] = [
     stack: "React, TypeScript, Redux, Scrum",
   },
   {
-    company: "Mochi Noir & Met-Care",
+    company: "Mochi Labs & Met-Care",
     urls: ["https://met-care.com"],
     title: { en: "Project Manager", pt: "Gestor de Projeto" },
     period: { en: "May – Aug 2021", pt: "Mai – Ago 2021" },
@@ -113,15 +113,15 @@ export const experience: Role[] = [
     },
   },
   {
-    company: "Mochi Noir",
+    company: "Mochi Night",
     title: {
       en: "Mobile Lead & Frontend Developer",
       pt: "Mobile Lead & Frontend Developer",
     },
     period: { en: "Sep 2020 – May 2021", pt: "Set 2020 – Mai 2021" },
     summary: {
-      en: "I **led a team of 5+ developers** building React Native apps for e-commerce projects. I also shipped the web storefronts where customers shopped and landing pages in React.",
-      pt: "**Liderei uma equipa de cinco ou mais programadores** na construção de apps em React Native para projetos de e-commerce. Também lancei as lojas online e as landing pages em React.",
+      en: "I **led a team of 5+ developers** building React Native apps for an on-demand drinks and snacks delivery service. I also built the web storefronts and landing pages in React.",
+      pt: "**Liderei uma equipa de cinco ou mais programadores** no desenvolvimento de aplicações em React Native para um serviço de entrega de bebidas e snacks a pedido. Também desenvolvi as lojas online e as páginas de apresentação em React.",
     },
     stack: "React Native, React, TypeScript, Redux, Jest",
   },
