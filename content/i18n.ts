@@ -4,7 +4,7 @@ const en = {
   meta: {
     title: "Edson Gregorio — Senior Software Engineer & Tech Lead",
     description:
-      "Edson Paulo Gregorio is a senior software engineer and tech lead. He builds web and mobile products, guides technical decisions, and integrates AI into products.",
+      "Edson Paulo Gregorio is a software engineer and tech lead. He builds web and mobile products, guides technical decisions, and integrates AI into products.",
   },
   nav: {
     about: "About",
