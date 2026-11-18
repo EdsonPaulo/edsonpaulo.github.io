@@ -13,6 +13,7 @@ export type Project = {
   tags: Tag[];
   status?: L;
   liveUrl?: string;
+  extraLink?: { url: string; label: L };
   repoUrl?: string;
   /** path under /public, e.g. /projects/storyroo.jpg */
   image?: string;
@@ -65,12 +66,16 @@ export const projects: Project[] = [
     stack: ["Next.js 16", "AI SDK", "OpenAI", "Anthropic", "Supabase", "QStash", "Resend", "Cloudflare"],
     tags: ["web", "ai"],
     liveUrl: "https://storyroo-app.vercel.app",
+    extraLink: {
+      url: "https://www.storyroo.app/songs",
+      label: { en: "Explore Storyroo Songs", pt: "Explorar Storyroo Songs" },
+    },
     image: "/projects/storyroo.jpg",
     caseStudy: {
       challenge: { en: "Create a personalized story from a few details about a child and make it available in print and audio.", pt: "Criar uma história personalizada a partir de alguns dados sobre a criança e disponibilizá-la em papel e áudio." },
       role: { en: "I built the product and its content generation workflow.", pt: "Desenvolvi o produto e o fluxo de geração de conteúdos." },
       decision: { en: "I combined story generation, illustrations, narration, and music in one workflow so they could use the same brief.", pt: "Reuni a geração da história, as ilustrações, a narração e a música num fluxo que usa os mesmos dados de partida." },
-      result: { en: "The live product turns a child’s interests into an illustrated book, audiobook, and song.", pt: "O produto disponível online transforma os interesses da criança num livro ilustrado, audiolivro e canção." },
+      result: { en: "The live product creates personalized illustrated books and audiobooks. Storyroo Songs also lets families create a song with their child’s name.", pt: "O produto cria livros ilustrados e audiolivros personalizados. No Storyroo Songs, as famílias também podem criar uma canção com o nome da criança." },
     },
   },
   {

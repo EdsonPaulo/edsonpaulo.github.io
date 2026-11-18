@@ -11,7 +11,7 @@ const galleryPriority = ["fila-livre", "phos-bot", "songsforge", "auravoy", "pag
 
 const filters: ("all" | Tag)[] = ["all", "web", "mobile", "ai", "backend"];
 
-function Links({ p, t }: { p: Project; t: Dict }) {
+function Links({ p, t, locale }: { p: Project; t: Dict; locale: Locale }) {
   return (
     <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
       {p.liveUrl && (
@@ -19,6 +19,12 @@ function Links({ p, t }: { p: Project; t: Dict }) {
           {t.projects.live}
           <FiArrowUpRight aria-hidden />
           <span className="sr-only">: {p.name}</span>
+        </a>
+      )}
+      {p.extraLink && (
+        <a href={p.extraLink.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-crimson hover:underline">
+          {p.extraLink.label[locale]}
+          <FiArrowUpRight aria-hidden />
         </a>
       )}
       {p.repoUrl && (
@@ -80,7 +86,7 @@ function CaseStudy({ p, t, locale }: { p: Project; t: Dict; locale: Locale }) {
         ))}
       </dl>
       <div className="mt-6">
-        <Links p={p} t={t} />
+        <Links p={p} t={t} locale={locale} />
       </div>
     </article>
   );
@@ -133,9 +139,9 @@ export function Projects({ t, locale }: { t: Dict; locale: Locale }) {
               </div>
               <p className="mt-2 leading-relaxed text-paper/85">{p.pitch[locale]}</p>
               <p className="mt-2 text-sm text-annot">{p.stack.join(", ")}</p>
-              {(p.liveUrl || p.repoUrl) && (
+              {(p.liveUrl || p.repoUrl || p.extraLink) && (
                 <div className="mt-3">
-                  <Links p={p} t={t} />
+                  <Links p={p} t={t} locale={locale} />
                 </div>
               )}
             </li>
@@ -153,7 +159,7 @@ export function Projects({ t, locale }: { t: Dict; locale: Locale }) {
             <span className="text-paper/80">
               {p.pitch[locale]} <span className="text-sm text-annot">{p.stack.join(", ")}</span>
             </span>
-            <Links p={p} t={t} />
+            <Links p={p} t={t} locale={locale} />
           </li>
         ))}
       </ul>
