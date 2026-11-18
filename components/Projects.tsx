@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { FiArrowUpRight, FiGithub } from "react-icons/fi";
+import { useId, useState } from "react";
+import { FiArrowUpRight, FiGithub, FiMaximize2 } from "react-icons/fi";
 import type { Dict } from "@/content/i18n";
 import { visibleProjects, type Project, type Tag } from "@/content/projects";
 import type { Locale } from "@/content/types";
+
+const galleryPriority = ["fila-livre", "phos-bot", "songsforge", "auravoy", "pageryn"];
 
 const filters: ("all" | Tag)[] = ["all", "web", "mobile", "ai", "backend"];
 
@@ -30,34 +32,55 @@ function Links({ p, t }: { p: Project; t: Dict }) {
   );
 }
 
-function Cover({ p }: { p: Project }) {
-  if (p.image)
-    return (
-      <Image src={p.image} alt="" width={1280} height={800} className="aspect-[16/10] w-full object-cover object-top" />
-    );
+function ProjectImage({ src, name, label }: { src: string; name: string; label: string }) {
+  const id = useId();
+
   return (
-    <div aria-hidden className="grid aspect-[16/10] w-full place-items-center bg-[radial-gradient(circle_at_30%_20%,#2c2533,transparent_60%)]">
-      <span className="text-6xl font-extrabold tracking-tight text-line [font-stretch:75%]">{p.name}</span>
-    </div>
+    <>
+      <button
+        type="button"
+        popoverTarget={id}
+        aria-label={`${label}: ${name}`}
+        className="relative mt-6 block w-full cursor-zoom-in rounded-2xl"
+      >
+        <Image src={src} alt="" width={1280} height={800} className="aspect-[16/9] w-full rounded-2xl object-cover object-top" />
+        <span className="absolute right-2 bottom-2 rounded-full bg-ink/85 p-2 text-paper">
+          <FiMaximize2 aria-hidden />
+        </span>
+      </button>
+      <div
+        id={id}
+        popover="auto"
+        className="pointer-events-none fixed inset-0 m-auto max-h-[86dvh] max-w-[min(92vw,72rem)] overflow-hidden rounded-xl border border-line bg-ink shadow-2xl shadow-black/70"
+      >
+        <Image src={src} alt={name} width={1280} height={800} className="h-auto max-h-[86dvh] w-auto max-w-full object-contain" />
+      </div>
+    </>
   );
 }
 
-function FeaturedCard({ p, t, locale }: { p: Project; t: Dict; locale: Locale }) {
+function CaseStudy({ p, t, locale }: { p: Project; t: Dict; locale: Locale }) {
+  const study = p.caseStudy;
+  if (!study) return null;
+  const sections = ["challenge", "role", "decision", "result"] as const;
+
   return (
-    <article className="group flex flex-col overflow-hidden rounded-3xl border border-line bg-surface/60">
-      <div className="overflow-hidden border-b border-line">
-        <Cover p={p} />
-      </div>
-      <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-baseline justify-between gap-4">
-          <h3 className="text-2xl font-semibold tracking-tight">{p.name}</h3>
-          <span className="shrink-0 text-sm text-muted">{p.status ? p.status[locale] : p.year}</span>
-        </div>
-        <p className="mt-3 leading-relaxed text-paper/85">{p.pitch[locale]}</p>
-        <p className="mt-4 text-sm leading-relaxed text-annot">{p.stack.join(", ")}</p>
-        <div className="mt-auto pt-6">
-          <Links p={p} t={t} />
-        </div>
+    <article className="overflow-hidden rounded-3xl border border-line bg-surface/60 p-6 sm:p-8">
+      <h4 className="text-3xl font-semibold tracking-tight">{p.name}</h4>
+      <p className="mt-2 text-sm text-annot">{p.stack.join(", ")}</p>
+      {p.image && (
+        <ProjectImage src={p.image} name={p.name} label={t.projects.enlarge} />
+      )}
+      <dl className="mt-6 grid gap-5">
+        {sections.map((section) => (
+          <div key={section}>
+            <dt className="text-sm font-semibold text-paper">{t.projects.caseLabels[section]}</dt>
+            <dd className="mt-1 leading-relaxed text-muted">{study[section][locale]}</dd>
+          </div>
+        ))}
+      </dl>
+      <div className="mt-6">
+        <Links p={p} t={t} />
       </div>
     </article>
   );
@@ -67,15 +90,25 @@ export function Projects({ t, locale }: { t: Dict; locale: Locale }) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("all");
   const match = (p: Project) => filter === "all" || p.tags.includes(filter);
 
-  const featured = visibleProjects.filter((p) => p.featured && match(p));
-  const more = visibleProjects.filter((p) => !p.featured && p.kind !== "archive" && match(p));
-  const archive = visibleProjects.filter((p) => p.kind === "archive");
+  const cases = visibleProjects.filter((p) => p.caseStudy);
+  const gallery = visibleProjects.filter((p) => !p.caseStudy && p.kind !== "archive" && match(p));
+  const more = [
+    ...galleryPriority.flatMap((slug) => gallery.filter((project) => project.slug === slug)),
+    ...gallery.filter((project) => !galleryPriority.includes(project.slug)),
+  ];
+  const archive = visibleProjects.filter((p) => p.kind === "archive" && !p.caseStudy);
 
   return (
     <>
       <p className="max-w-2xl text-lg leading-relaxed text-paper/85">{t.projects.intro}</p>
 
-      <div role="group" aria-label={t.projects.title} className="mt-8 flex flex-wrap gap-2">
+      <h3 className="mt-10 text-2xl font-semibold tracking-tight">{t.projects.cases}</h3>
+      <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {cases.map((p) => <CaseStudy key={p.slug} p={p} t={t} locale={locale} />)}
+      </div>
+
+      <h3 id="project-gallery" className="mt-16 text-2xl font-semibold tracking-tight">{t.projects.more}</h3>
+      <div role="group" aria-labelledby="project-gallery" className="mt-8 flex flex-wrap gap-2">
         {filters.map((f) => (
           <button
             key={f}
@@ -89,35 +122,25 @@ export function Projects({ t, locale }: { t: Dict; locale: Locale }) {
         ))}
       </div>
 
-      {featured.length + more.length === 0 && <p className="mt-10 text-muted">{t.projects.empty}</p>}
-
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        {featured.map((p) => (
-          <FeaturedCard key={p.slug} p={p} t={t} locale={locale} />
-        ))}
-      </div>
-
+      {more.length === 0 && <p className="mt-6 text-muted">{t.projects.empty}</p>}
       {more.length > 0 && (
-        <>
-          <h3 className="mt-20 text-2xl font-semibold tracking-tight">{t.projects.more}</h3>
-          <ul className="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-2">
-            {more.map((p) => (
-              <li key={p.slug} className="border-t border-line pt-5">
-                <div className="flex items-baseline justify-between gap-4">
-                  <h4 className="text-lg font-semibold">{p.name}</h4>
-                  <span className="shrink-0 text-sm text-muted">{p.status ? p.status[locale] : p.year}</span>
+        <ul className="mt-6 grid gap-x-10 gap-y-8 md:grid-cols-2">
+          {more.map((p) => (
+            <li key={p.slug} className="border-t border-line pt-5">
+              <div className="flex items-baseline justify-between gap-4">
+                <h4 className="text-lg font-semibold">{p.name}</h4>
+                <span className="shrink-0 text-sm text-muted">{p.status ? p.status[locale] : p.year}</span>
+              </div>
+              <p className="mt-2 leading-relaxed text-paper/85">{p.pitch[locale]}</p>
+              <p className="mt-2 text-sm text-annot">{p.stack.join(", ")}</p>
+              {(p.liveUrl || p.repoUrl) && (
+                <div className="mt-3">
+                  <Links p={p} t={t} />
                 </div>
-                <p className="mt-2 leading-relaxed text-paper/85">{p.pitch[locale]}</p>
-                <p className="mt-2 text-sm text-annot">{p.stack.join(", ")}</p>
-                {(p.liveUrl || p.repoUrl) && (
-                  <div className="mt-3">
-                    <Links p={p} t={t} />
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </>
+              )}
+            </li>
+          ))}
+        </ul>
       )}
 
       <h3 className="mt-20 text-2xl font-semibold tracking-tight">{t.projects.archive}</h3>

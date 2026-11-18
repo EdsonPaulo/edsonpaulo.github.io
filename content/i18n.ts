@@ -26,6 +26,9 @@ const en = {
     title: "Projects",
     intro:
       "A selection of products, client work, and prototypes. Open the live sites or public repositories where available.",
+    cases: "Selected case studies",
+    enlarge: "Enlarge image",
+    caseLabels: { challenge: "Challenge", role: "My role", decision: "Technical decision", result: "What shipped" },
     filters: {
       all: "All",
       web: "Web",
@@ -35,7 +38,7 @@ const en = {
     },
     live: "Open live site",
     code: "View code",
-    more: "More products and freelance work",
+    more: "Project gallery",
     archive: "Earlier work, 2019–2023",
     archiveIntro: "University and early-career projects, all open source.",
     empty: "No projects in this category yet.",
@@ -95,6 +98,9 @@ const pt: Dict = {
     title: "Projetos",
     intro:
       "Uma seleção de produtos, trabalhos para clientes e protótipos, com links para os sites ou repositórios públicos quando disponíveis.",
+    cases: "Casos em destaque",
+    enlarge: "Ampliar imagem",
+    caseLabels: { challenge: "Desafio", role: "O meu papel", decision: "Decisão técnica", result: "Resultado" },
     filters: {
       all: "Todos",
       web: "Web",
@@ -104,7 +110,7 @@ const pt: Dict = {
     },
     live: "Abrir site",
     code: "Ver código",
-    more: "Mais produtos e trabalho freelance",
+    more: "Galeria de projetos",
     archive: "Trabalho anterior, 2019–2023",
     archiveIntro:
       "Projetos da universidade e do início de carreira, todos open source.",

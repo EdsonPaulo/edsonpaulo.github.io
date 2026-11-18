@@ -28,6 +28,10 @@ export const experience: Role[] = [
     stack: "React Native, Expo, React, Next.js, TypeScript, Node.js, Stripe",
     points: [
       {
+        en: "**Mobile CI/CD, cloud services, and integrations** across the product. I worked with Bitrise for mobile CI/CD, Amazon S3 and Cognito for storage and authentication, Google Cloud Platform and Heroku, and integrations with Twilio and OpenAI GPT.",
+        pt: "**CI/CD mobile, serviços cloud e integrações** no produto. Trabalhei com Bitrise para CI/CD mobile, Amazon S3 e Cognito para armazenamento e autenticação, Google Cloud Platform e Heroku, e integrações com Twilio e OpenAI GPT.",
+      },
+      {
         en: "**Top contributor to both mobile apps**, with 2,700+ commits across the two. I upgraded them to Expo SDK 57 and React 19 while maintaining the release schedule.",
         pt: "**Principal contribuidor nas duas aplicações mobile**, com mais de 2.700 commits no total. Atualizei ambas para o Expo SDK 57 e React 19 mantendo o ritmo de publicação.",
       },
@@ -108,8 +112,8 @@ export const experience: Role[] = [
     title: { en: "Project Manager", pt: "Gestor de Projeto" },
     period: { en: "May – Aug 2021", pt: "Mai – Ago 2021" },
     summary: {
-      en: "**Promoted** to run delivery across two client products: planned and split the work, led the team rituals and owned code review.",
-      pt: "**Promovido** para gerir a entrega de dois produtos de clientes: planeei e distribuí o trabalho, conduzi os rituais da equipa e fiquei responsável pela revisão de código.",
+      en: "**Promoted to Project Manager** to coordinate delivery across two client products, including software for managing MET-CARE’s healthcare operations. The work covered processes for emergency response and medical transport, occupational health, health plans and insurance, and clinic network management. I planned and assigned work, led team meetings, and reviewed code.",
+      pt: "**Promovido a Gestor de Projeto** para coordenar a entrega de dois produtos de clientes, incluindo um software de gestão das operações de saúde da MET-CARE. O trabalho abrangia processos de assistência de emergência e transporte médico, saúde ocupacional, planos e seguros de saúde e gestão da rede de clínicas. Planeei e distribuí o trabalho, conduzi as reuniões da equipa e fiz revisão de código.",
     },
   },
   {
@@ -133,8 +137,8 @@ export const experience: Role[] = [
     },
     period: { en: "Feb – Sep 2020", pt: "Fev – Set 2020" },
     summary: {
-      en: "**Led the frontend** of a mid-size project: planned it, designed the UI in Figma and split the work across the frontend team, then built the web and mobile apps.",
-      pt: "**Liderei o frontend** de um projeto de média dimensão: planeei-o, desenhei a UI no Figma e distribuí o trabalho pela equipa de frontend, e depois construí as apps web e mobile.",
+      en: "I **led frontend development** at Petabyte, planned the work, designed interfaces in Figma, and contributed to web and mobile development. **Kussoma Freight** connected businesses that needed to ship goods with carriers that could move them. It had separate apps for requesting freight and finding loads to transport. I also worked on **Carne Sul**, a meat delivery app.",
+      pt: "**Liderei o desenvolvimento frontend** na Petabyte, planeei o trabalho, desenhei interfaces no Figma e participei no desenvolvimento web e mobile. O **Kussoma Freight** ligava empresas que precisavam de enviar mercadorias a transportadores. Tinha uma aplicação para solicitar fretes e outra para encontrar cargas a transportar. Também trabalhei no **Carne Sul**, uma aplicação de entrega de carne.",
     },
     stack: "Angular, React Native, REST APIs, SCSS, Figma",
   },

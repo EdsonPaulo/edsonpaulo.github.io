@@ -16,7 +16,9 @@ export type Project = {
   repoUrl?: string;
   /** path under /public, e.g. /projects/storyroo.jpg */
   image?: string;
+  /** Included in the CV project selection. */
   featured?: boolean;
+  caseStudy?: { challenge: L; role: L; decision: L; result: L };
   /** set to false to hide a project from the site */
   visible: boolean;
   /** why it is hidden by default — for your eyes only, never rendered */
@@ -28,7 +30,27 @@ const wip: L = { en: "In progress", pt: "Em desenvolvimento" };
 const prototype: L = { en: "Prototype", pt: "Protótipo" };
 
 export const projects: Project[] = [
-  // ── Featured products ────────────────────────────────────────────────
+  {
+    slug: "sheerme",
+    name: "sheerME",
+    year: "2021–",
+    kind: "freelance",
+    visible: true,
+    pitch: {
+      en: "A beauty and wellness platform for customers and businesses.",
+      pt: "Uma plataforma de beleza e bem-estar para clientes e negócios.",
+    },
+    stack: ["React Native", "Expo", "Next.js", "Stripe Connect", "Bitrise", "AWS", "Twilio", "OpenAI GPT"],
+    tags: ["web", "mobile"],
+    liveUrl: "https://sheerme.com/",
+    image: "/projects/sheerme.png",
+    caseStudy: {
+      challenge: { en: "Customers need to find and book services. Businesses need to manage schedules, clients, and payments.", pt: "Os clientes precisam de encontrar e marcar serviços. Os negócios precisam de gerir agendas, clientes e pagamentos." },
+      role: { en: "I lead frontend engineering across web and mobile, from architecture and code review to release.", pt: "Lidero a engenharia frontend na web e em mobile, da arquitetura e revisão de código ao lançamento." },
+      decision: { en: "We used a shared codebase to publish localized and white-label editions of each app.", pt: "Usámos uma base de código partilhada para publicar versões localizadas e white-label de cada aplicação." },
+      result: { en: "The business app, PRO back office, and marketplace site went live. The platform is used daily in Portugal, Spain, and Brazil.", pt: "A aplicação para negócios, o back office PRO e o site do marketplace entraram em produção. A plataforma é usada diariamente em Portugal, Espanha e Brasil." },
+    },
+  },
   {
     slug: "storyroo",
     name: "Storyroo",
@@ -40,10 +62,16 @@ export const projects: Project[] = [
       en: "Turns a child's name, age and interests into a personalised illustrated book, audiobook and song, ready to print.",
       pt: "Transforma o nome, a idade e os interesses de uma criança num livro ilustrado, audiolivro e canção personalizados, prontos a imprimir.",
     },
-    stack: ["Next.js 16", "AI SDK", "OpenAI", "Anthropic", "Supabase", "QStash", "Resend"],
+    stack: ["Next.js 16", "AI SDK", "OpenAI", "Anthropic", "Supabase", "QStash", "Resend", "Cloudflare"],
     tags: ["web", "ai"],
     liveUrl: "https://storyroo-app.vercel.app",
     image: "/projects/storyroo.jpg",
+    caseStudy: {
+      challenge: { en: "Create a personalized story from a few details about a child and make it available in print and audio.", pt: "Criar uma história personalizada a partir de alguns dados sobre a criança e disponibilizá-la em papel e áudio." },
+      role: { en: "I built the product and its content generation workflow.", pt: "Desenvolvi o produto e o fluxo de geração de conteúdos." },
+      decision: { en: "I combined story generation, illustrations, narration, and music in one workflow so they could use the same brief.", pt: "Reuni a geração da história, as ilustrações, a narração e a música num fluxo que usa os mesmos dados de partida." },
+      result: { en: "The live product turns a child’s interests into an illustrated book, audiobook, and song.", pt: "O produto disponível online transforma os interesses da criança num livro ilustrado, audiolivro e canção." },
+    },
   },
   {
     slug: "auravoy",
@@ -317,6 +345,12 @@ export const projects: Project[] = [
     stack: ["React Native", "Expo"],
     tags: ["mobile"],
     repoUrl: gh("kussoma-shipper"),
+    caseStudy: {
+      challenge: { en: "Connect businesses that need to ship goods with carriers looking for loads.", pt: "Ligar empresas que precisam de enviar mercadorias a transportadores à procura de cargas." },
+      role: { en: "At Petabyte, I led frontend development, designed interfaces in Figma, and contributed to implementation.", pt: "Na Petabyte, liderei o desenvolvimento frontend, desenhei interfaces no Figma e participei na implementação." },
+      decision: { en: "We built separate React Native apps so shippers could request freight and carriers could find loads.", pt: "Criámos aplicações separadas em React Native para os expedidores pedirem fretes e os transportadores encontrarem cargas." },
+      result: { en: "The shipper app has a public repository.", pt: "O repositório da aplicação para expedidores está disponível publicamente." },
+    },
   },
   {
     slug: "epg-news",

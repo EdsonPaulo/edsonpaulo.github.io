@@ -36,9 +36,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === "pt" ? "pt_PT" : "en_US",
       alternateLocale: locale === "pt" ? "en_US" : "pt_PT",
       siteName: profile.shortName,
-      images: [{ url: "/img/edson.jpg", width: 816, height: 994, alt: profile.name }],
+      images: [profile.shareImage],
     },
-    twitter: { card: "summary", title: t.meta.title, description: t.meta.description, images: ["/img/edson.jpg"] },
+    twitter: { card: "summary_large_image", title: t.meta.title, description: t.meta.description, images: [profile.shareImage] },
     icons: {
       icon: [
         { url: "/favicon.ico" },

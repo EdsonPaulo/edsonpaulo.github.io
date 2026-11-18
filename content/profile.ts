@@ -12,6 +12,12 @@ export const profile = {
   phone: "+244 942 682 194",
   whatsapp: "244942682194",
   site: "https://edsonpaulo.github.io",
+  shareImage: {
+    url: "/img/social-card.jpg",
+    width: 1200,
+    height: 630,
+    alt: "EPG · Edson Paulo Gregorio · Senior Software Engineer & Tech Lead",
+  },
   socials: {
     github: "https://github.com/EdsonPaulo",
     linkedin: "https://www.linkedin.com/in/edsonpaulo1",

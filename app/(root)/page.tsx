@@ -5,6 +5,20 @@ import { profile } from "@/content/profile";
 export const metadata: Metadata = {
   metadataBase: new URL(profile.site),
   title: dict.en.meta.title,
+  description: dict.en.meta.description,
+  openGraph: {
+    type: "profile",
+    url: "/",
+    title: dict.en.meta.title,
+    description: dict.en.meta.description,
+    images: [profile.shareImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: dict.en.meta.title,
+    description: dict.en.meta.description,
+    images: [profile.shareImage],
+  },
   robots: { index: false },
   alternates: { canonical: "/en/", languages: { en: "/en/", pt: "/pt/" } },
 };
