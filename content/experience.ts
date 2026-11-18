@@ -119,13 +119,13 @@ export const experience: Role[] = [
   {
     company: "Mochi Night",
     title: {
-      en: "Mobile Lead & Frontend Developer",
-      pt: "Mobile Lead & Frontend Developer",
+      en: "Mobile & Frontend Developer",
+      pt: "Mobile & Frontend Developer",
     },
     period: { en: "Sep 2020 – May 2021", pt: "Set 2020 – Mai 2021" },
     summary: {
-      en: "I **led a team of 5+ developers** building React Native apps for an on-demand drinks and snacks delivery service. I also built the web storefronts and landing pages in React.",
-      pt: "**Liderei uma equipa de cinco ou mais programadores** no desenvolvimento de aplicações em React Native para um serviço de entrega de bebidas e snacks a pedido. Também desenvolvi as lojas online e as páginas de apresentação em React.",
+      en: "I worked on the development of **React Native apps for on-demand drinks and snacks delivery**, as well as online stores and landing pages in React.",
+      pt: "Trabalhei no desenvolvimento de **aplicações de entrega de bebidas e snacks em React Native**, além de lojas online e páginas de apresentação em React.",
     },
     stack: "React Native, React, TypeScript, Redux, Jest",
   },
