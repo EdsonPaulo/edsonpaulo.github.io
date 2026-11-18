@@ -11,7 +11,7 @@ export const profile = {
   email: "edsonpaulo24@gmail.com",
   phone: "+244 942 682 194",
   whatsapp: "244942682194",
-  site: "https://edsonpaulo.github.io",
+  site: "https://edsonpaulo.vercel.app",
   shareImage: {
     url: "/img/social-card.jpg",
     width: 1200,
